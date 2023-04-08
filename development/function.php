@@ -9,6 +9,7 @@ function build($filename, $content, $params = [])
         '{{ baseUrl }}' => 'https://sugengsulistiyawan.my.id/kaderkerensmpn5trenggalek/',
         '{{ name }}'    => 'Kader Keren SMPN 5 Trenggalek',
         '{{ tagline }}' => 'Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan',
+        '{{ version }}' => time(),
     ];
     foreach ($params as $key => $value) {
         $_params["{{ $key }}"] = $value;
