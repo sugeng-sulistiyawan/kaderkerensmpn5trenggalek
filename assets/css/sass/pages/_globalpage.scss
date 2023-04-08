@@ -286,7 +286,8 @@ img {
   img {
     vertical-align: bottom;
     margin-right: 0.5rem;
-    width: 27px;
+    width: 100%;
+    max-width: 200px;
   }
 }
 
@@ -449,7 +450,7 @@ img {
 }
 .loading_overlay {
   @include overlay;
-  background-color: #fef8f2;
+  background-color: $blue-color;
   overflow: hidden;
   position: fixed;
   z-index: 999999;
@@ -459,8 +460,8 @@ img {
   .loader_logo {
     position: relative;
     .logo {
-      width: 40px;
-      height: 40px;
+      width: 200px;
+      height: 200px;
       @include prefixer(
         animation,
         text-focus-in 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both,
