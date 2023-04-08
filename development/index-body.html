@@ -1,4 +1,3 @@
-
 <body>
   <div id="wrapper">
     <div id="content">
@@ -7,7 +6,7 @@
         <div class="container">
           <!-- navbar -->
           <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
-            <a class="navbar-brand" href="../../index.html">
+            <a class="navbar-brand" href="{{ baseUrl }}">
               <img class="logo" src="../assets/img/logo.svg" alt="logo" />
             </a>
 
@@ -960,9 +959,9 @@
               </div>
               <div class="opyright">
                 <p>
-                  © 2020
-                  <a href="https://themeforest.net/user/orinostu" target="_blank">OrinoStu.</a>
-                  All Right Reseved
+                  © 2023
+                  <a href="{{ baseUrl }}">{{ name }}</a>
+                  All Right Reserved.
                 </p>
               </div>
             </div>
@@ -970,28 +969,6 @@
         </div>
       </footer>
     </div>
-
-    <!-- Back to top with progress indicator-->
-    <div class="prgoress_indicator">
-      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
-    </div>
-
-    <!-- Tosts -->
-    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center">
-      <div class="toast toast_demo" id="myTost" role="alert" aria-live="assertive" aria-atomic="true"
-        data-animation="true" data-autohide="false">
-        <div class="toast-body">
-          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-            <i class="tio clear"></i>
-          </button>
-          <h5>Hi there 👋</h5>
-          <p>We are glad you joined us <a href="#">Join us</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- End. Toasts -->
 
     <!-- Start Section Loader -->
     <section class="loading_overlay">

@@ -19,7 +19,7 @@ $params = [
 
 $content = "<!DOCTYPE html>\n<html lang=\"en\">\n";
 $content .= file_get_contents($dev . '/head.html') . "\n";
-$content .= file_get_contents($dev . '/mobile-app.html') . "\n";
+$content .= file_get_contents($dev . '/index-body.html') . "\n";
 $content .= "</html>";
 
 build($prod, $content, $params);
