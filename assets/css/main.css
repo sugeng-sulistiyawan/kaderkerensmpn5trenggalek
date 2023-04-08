@@ -3166,7 +3166,7 @@ header .navbar .navbar-brand {
 header .navbar .navbar-brand .logo {
   vertical-align: bottom;
   margin-right: 0.5rem;
-  height: 60px;
+  max-height: 60px;
 }
 header .navbar .navbar-collapse {
   margin-top: 0.4rem;
@@ -3214,7 +3214,7 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
     font-size: 18px !important;
   }
   header .navbar-brand .logo {
-    width: 24px !important;
+    max-height: 40px !important;
   }
   header .navbar-collapse {
     margin-left: 0 !important;
