@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Generator
+ *
+ * @link [sugeng-sulistiyawan.github.io](sugeng-sulistiyawan.github.io)
+ * @author Sugeng Sulistiyawan <sugeng.sulistiyawan@gmail.com>
+ * @copyright Copyright (c) 2023
+ */
+
+use app\Config;
+
+$Root = dirname(__DIR__);
+$App  = $Root . '/src';
+
+
+require $Root . '/vendor/autoload.php';
+require $Root . '/vendor/yiisoft/yii2/Yii.php';
+require $App . '/helpers/function.php';
+
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
+
+$config = new Config();
+
+foreach ([
+    'index',
+] as $page) {
+    echo "build {$page} ...";
+    try {
+        build($config, $page);
+    } catch (\Throwable $th) {
+        echo " error\n";
+        exit;
+    }
+    echo " success\n";
+}
