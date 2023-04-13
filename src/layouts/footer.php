@@ -45,13 +45,11 @@ $config = new Config();
 <!-- End. wrapper -->
 
 <!-- jquery -->
-<script src="<?= $config->assets ?>/js/jquery-3.5.0.js" type="text/javascript"></script>
+<script src="<?= $config->assets ?>/js/jquery-3.6.4.slim.min.js" type="text/javascript"></script>
 <!-- jquery-migrate -->
-<script src="<?= $config->assets ?>/js/jquery-migrate.min.js" type="text/javascript"></script>
-<!-- popper -->
-<script src="<?= $config->assets ?>/js/popper.min.js" type="text/javascript"></script>
+<script src="<?= $config->assets ?>/js/jquery-migrate-3.4.0.min.js" type="text/javascript"></script>
 <!-- bootstrap -->
-<script src="<?= $config->assets ?>/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="<?= $config->assets ?>/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <!--
   ============
   vendor file
@@ -90,7 +88,7 @@ $config = new Config();
 <!-- Aos -->
 <script src="<?= $config->assets ?>/js/vendor/aos.js" type="text/javascript"></script>
 <!-- main file -->
-<script src="<?= $config->assets ?>/js/main.js?version=<?= $config->version ?>" type="text/javascript"></script>
+<script src="<?= $config->assets ?>/js/main.min.js?version=<?= $config->version ?>" type="text/javascript"></script>
 <!-- mobile -->
 <script src="<?= $config->assets ?>/js/pages/mobile.js?version=<?= $config->version ?>" type="text/javascript"></script>
 

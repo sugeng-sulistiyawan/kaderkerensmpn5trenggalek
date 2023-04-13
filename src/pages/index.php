@@ -82,6 +82,13 @@ $config = new Config();
         </div>
       </div>
     </div>
+
+    <div class="text-center">
+      <a href="<?= $config->getBasePage('tentang') ?>" class="btn btn_lg_primary effect-letter rounded-8 margin-t-4 bg-gold c-dark">
+        Detail Tentang Kami
+      </a>
+    </div>
+
   </div>
 </section>
 <!-- End Services -->

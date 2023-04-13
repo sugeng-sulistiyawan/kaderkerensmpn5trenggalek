@@ -47,7 +47,7 @@ $config = new Config();
   <!-- Swiper -->
   <link rel="stylesheet" href="<?= $config->assets ?>/css/swiper.min.css" />
   <!-- icons -->
-  <link rel="stylesheet" href="<?= $config->assets ?>/css/icons.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="<?= $config->assets ?>/css/icons.css" type="text/css" /> -->
   <!-- aos -->
   <link rel="stylesheet" href="<?= $config->assets ?>/css/aos.css" type="text/css" />
   <!-- main css -->
