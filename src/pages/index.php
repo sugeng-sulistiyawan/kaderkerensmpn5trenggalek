@@ -54,7 +54,7 @@ $config = new Config();
 <!-- End Banner -->
 
 <!-- Start Services -->
-<section class="services_section service_demo5">
+<section class="services_section service_demo5 service__workspace my-0 padding-py-12">
   <div class="container">
     <div class="text-center">
       <div class="title_sections mb-5">
@@ -88,7 +88,7 @@ $config = new Config();
 <!-- End Services -->
 
 <!-- Start feature_app -->
-<section class="feature_app feature_demo2 margin-t-12 padding-t-12" id="Inovasi">
+<section class="feature_app feature_demo2 padding-t-12" id="Inovasi">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-10 col-lg-6 text-center">
