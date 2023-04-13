@@ -23,13 +23,12 @@ $config = new Config();
 
 require $config->root . '/layouts/header.php';
 
-$page = $config->request->get('page', 'index');
+$page = $config->getPage();
 switch ($page) {
     case 'value':
         # code...
         break;
 
-    case 'index':
     default:
         $page = 'index';
         require $config->root . '/pages/index.php';

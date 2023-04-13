@@ -105,8 +105,13 @@ if (!function_exists('minifyJs')) {
  */
 function build(Config $config, $page)
 {
+    // $baseUrl = 'https://kaderkerensmpn5trenggalek.my.id';
+    $baseUrl = '';
+
     $html = strtr(file_get_contents($config->baseUrl . '/index.php?page=' . $page), [
-        $config->assets => './assets',
+        $config->baseUrl => $baseUrl . '/',
+        $config->assets => $baseUrl . '/assets',
+        '/index.php?page=' . $page => $page . '.html',
     ]);
 
     file_put_contents(dirname($config->root) . '/' . $page . '.html', $html);

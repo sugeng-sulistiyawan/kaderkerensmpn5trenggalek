@@ -18,7 +18,7 @@ require $root . '/vendor/yiisoft/yii2/Yii.php';
 require $root . '/helpers/function.php';
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
+defined('YII_ENV') or define('YII_ENV', 'prod');
 
 $config = new Config();
 

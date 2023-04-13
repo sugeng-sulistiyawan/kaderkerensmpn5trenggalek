@@ -15,8 +15,8 @@ $config = new Config();
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan" />
-  <meta name="keywords" content="Inklusi Sosial, Kader Keren, SMPN 5 Trenggalek" />
-  <meta name="author" content="Kader Keren SMPN 5 Trenggalek" />
+  <meta name="keywords" content="Inklusi Sosial, KADEr KEREN, SMPN 5 Trenggalek" />
+  <meta name="author" content="KADEr KEREN SMPN 5 Trenggalek" />
 
   <title><?= $config->title ?></title>
   <!-- favicon -->
@@ -82,3 +82,15 @@ $config = new Config();
                 <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
               </svg>
             </button>
+
+            <?php require __DIR__ . '/menu.php' ?>
+
+          </nav>
+          <!-- End Navbar -->
+        </div>
+        <!-- end container -->
+      </header>
+      <!-- End header -->
+
+      <!-- Stat main -->
+      <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">

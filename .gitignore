@@ -95,3 +95,5 @@ Backup*.cdr
 
 # Ignore code-workspaces
 *.code-workspace
+
+/refs

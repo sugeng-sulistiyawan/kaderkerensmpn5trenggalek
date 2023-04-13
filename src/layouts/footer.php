@@ -10,45 +10,22 @@ $config = new Config();
 <!-- end main -->
 
 <!-- [id] content -->
-<footer class="footer_short bg-white padding-t-12">
+<footer class="footer_short bg-white padding-t-12 pb-4">
     <div class="container">
         <div class="row justify-content-md-center text-center">
             <div class="col-md-8">
                 <a class="logo c-dark" href="mobile-app.html">
                     <img src="<?= $config->assets ?>/logo.png" alt="">
                 </a>
-                <div class="social--media">
-                    <a href="#" class="btn so-link">
-                        <i class="tio appstore"></i>
-                    </a>
-                    <a href="#" class="btn so-link">
-                        <i class="tio github"></i>
-                    </a>
-                    <a href="#" class="btn so-link">
-                        <i class="tio instagram"></i>
-                    </a>
-                    <a href="#" class="btn so-link">
-                        <i class="tio google"></i>
-                    </a>
-                    <a href="#" class="btn so-link">
-                        <i class="tio twitter"></i>
-                    </a>
-                    <a href="#" class="btn so-link">
-                        <i class="tio facebook_square"></i>
-                    </a>
-                </div>
-                <div class="other--links">
-                    <a href="#">White paper</a>
-                    <a href="#">Support</a>
-                    <a href="#">API</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
+                <div class="mt-4">
+                    <h4 class="font-weight-bold">KADEr KEREN</h4>
+                    <h6>Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan</h6>
                 </div>
                 <div class="opyright">
                     <p>
                         © <?= date('Y') ?>
                         <a href="<?= $config->baseUrl ?>"><?= $config->name ?></a>.
-                        All Right Reserved.
+                        <span class="d-block d-md-inline-block">All Right Reserved.</span>
                     </p>
                 </div>
             </div>
