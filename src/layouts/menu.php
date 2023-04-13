@@ -28,7 +28,7 @@ $config = new Config();
             <a class="nav-link" href="<?= $config->getBasePage('tentang') ?>">Tentang Kami</a>
         </li>
     </ul>
-    <div class="nav_account btn_demo3">
+    <div class="nav_account btn_demo3 d-none d-lg-block">
         <a href="<?= $config->whatsappUrl() ?>" class="btn btn_sm_primary c-dark effect-letter rounded-8" target="_blank" rel="noopener noreferrer">
             Admin Whatsapp
         </a>
