@@ -36,7 +36,7 @@ class Config extends Component
     /**
      * 
      */
-    public static function whatsappUrl(string $text = ""): string
+    public static function whatsappUrl(string $text = ''): string
     {
         return 'https://wa.me/' . static::phonePretty() . ($text ? '?text=' . urldecode($text) : '');
     }
@@ -55,6 +55,14 @@ class Config extends Component
     public static function phone(): string
     {
         return str_replace(' ', '', static::phonePretty());
+    }
+
+    /**
+     * 
+     */
+    public function getBasePage(string $page = ''): string
+    {
+        return $this->baseUrl . '/index.php?page=' . $page;
     }
 
     /**

@@ -11,8 +11,6 @@ $config = new Config();
 // Dokumentasi
 // Strategi Keberlanjutan
 
-$page = $config->baseUrl . '/index.php?page=';
-
 ?>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -21,13 +19,13 @@ $page = $config->baseUrl . '/index.php?page=';
             <a class="nav-link" href="<?= $config->baseUrl ?>">Beranda</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= $config->isPage('index') ? '' : $page . 'index' ?>#inovasi">Inovasi</a>
+            <a class="nav-link" href="<?= $config->isPage('index') ? '' : $config->getBasePage('index') ?>#Inovasi">Inovasi</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= $$page . 'dokumentasi' ?>">Dokumentasi</a>
+            <a class="nav-link" href="<?= $config->getBasePage('dokumentasi') ?>">Dokumentasi</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= $$page . 'dokumentasi' ?>">Dokumentasi</a>
+            <a class="nav-link" href="<?= $config->getBasePage('dokumentasi') ?>">Dokumentasi</a>
         </li>
     </ul>
     <div class="nav_account btn_demo3">

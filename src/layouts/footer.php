@@ -14,8 +14,8 @@ $config = new Config();
     <div class="container">
         <div class="row justify-content-md-center text-center">
             <div class="col-md-8">
-                <a class="logo c-dark" href="mobile-app.html">
-                    <img src="<?= $config->assets ?>/logo.png" alt="">
+                <a class="logo c-dark" href="<?= $config->baseUrl ?>">
+                    <img src="<?= $config->assets ?>/favicon.png" alt="">
                 </a>
                 <div class="mt-4">
                     <h4 class="font-weight-bold">KADEr KEREN</h4>

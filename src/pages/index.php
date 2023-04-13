@@ -8,33 +8,36 @@ $config = new Config();
 
 
 <!-- Start Banner Section -->
-<section class="demo_1 banner_section banner_demo8">
+<section class="demo_1 banner_section banner_demo8 border-bottom-1">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-lg-5 order-2 order-lg-1">
         <div class="banner_title">
-          <h1>
-            Save Big On Every Order.
-            <span class="c-purple">Join Rakon.</span>
+          <h1 class="c-blue">
+            KADEr
+            <span class="c-yollow">KEREN.</span>
           </h1>
-          <p>
-            Rakon. free deliveries. Reduced fees on eligible orders.
-            Exclusive deals. Try Postmates Rakon now for
-            <span class="c-aquamarine">free</span>, cancel anytime.
-          </p>
+          <h6 class="mb-5 c-sea">
+            Te<span class="c-blue">kad</span> Bermasa Depan C<span class="c-blue">er</span>ah bagi Siswa
+            <span class="c-yollow">Ke</span>lompok <span class="c-yollow">Ren</span>tan
+          </h6>
           <div class="subscribe_phone">
             <div class="row">
               <div class="col-md-8">
-                <div class="form-group">
-                  <input type="text" class="form-control rounded-8" placeholder="Enter your phone number" />
-                </div>
                 <div class="button--click">
-                  <button type="button" class="btn btn_app btn_xl_primary scale c-gradient">
-                    Get the app
-                  </button>
+                  <a href="<?= $config->whatsappUrl() ?>" class="btn btn_app btn_xl_primary scale c-gradient btn-primary" target="_blank" rel="noopener noreferrer">
+                    Hubungi Admin
+                    <div class="text-monospace">
+                      <?= $config->phonePretty() ?>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="mt-5 text-center text-sm-left">
+            <a href="#ProgramInovasi" class="h4 font-weight-bold d-block c-orange-red">#ProgramInovasi</a>
+            <a href="#AksiInovasi" class="h4 font-weight-bold d-block c-blue">#AksiInovasi</a>
           </div>
         </div>
       </div>
@@ -42,8 +45,7 @@ $config = new Config();
         <div class="ill_appMobile">
           <img class="ill_app" src="<?= $config->assets ?>/img/app/c_app.svg" />
           <img class="ill_bg" src="<?= $config->assets ?>/img/app/background.svg" />
-          <img class="ill_user" src="<?= $config->assets ?>/img/app/user.svg" />
-          <a href="#" class="btn btn_lg_primary effect-letter try_it bg-gold c-dark rounded-8">Try it free</a>
+          <img class="ill_user" src="<?= $config->assets ?>/refs/slider1.png" />
         </div>
       </div>
     </div>
@@ -52,54 +54,32 @@ $config = new Config();
 <!-- End Banner -->
 
 <!-- Start Services -->
-<section class="services_section service_demo5 padding-t-12">
+<section class="services_section service_demo5">
   <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-md-8 col-lg-6 text-center">
-        <div class="title_sections">
-          <div class="before_title">
-            <span>Our</span>
-            <span class="c-gold">Services</span>
-          </div>
-          <h2>Featured Service that We Provide</h2>
+    <div class="text-center">
+      <div class="title_sections mb-5">
+        <div class="before_title">
+          <span>Tentang</span>
+          <span class="c-yollow">Sekolah</span>
         </div>
+        <h2>SMPN 5 TRENGGALEK</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 beta">
-        <div class="items_serv" data-aos="fade-up" data-aos-delay="0">
-          <div class="media">
-            <div class="item-img">
-              <img src="<?= $config->assets ?>/img/icons/Miso-soup.svg" alt="" />
-            </div>
-            <div class="media-body my-auto">
-              <h3>Food delivery, now u can stay home and dig in.</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 beta">
-        <div class="items_serv selected" data-aos="fade-up" data-aos-delay="100">
-          <div class="media">
-            <div class="item-img">
-              <img src="<?= $config->assets ?>/img/icons/Direction.svg" alt="" />
-            </div>
-            <div class="media-body">
-              <h3>We are Coming to you with delivery service.</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 beta">
-        <div class="items_serv" data-aos="fade-up" data-aos-delay="200">
-          <div class="media">
-            <div class="item-img">
-              <img src="<?= $config->assets ?>/img/icons/Thunder-white.svg" alt="" />
-            </div>
-            <div class="media-body">
-              <h3>Fast and free delivery- open 24 hours.</h3>
-            </div>
-          </div>
+    <div class="items_serv selected" data-aos="fade-up" data-aos-delay="100">
+      <div class="media">
+        <div class="media-body text-center h6 c-blue">
+          SMPN 5 Trenggalek merupakan sekolah menengah pertama yang berada di tengah kota Trenggalek.
+          Berdasarkan Keputusan Menteri Koordinasi Bidang Pembangunan Manusia dan Kebudayaan Nomor 22 Tahun 2022,
+          2/3 wilayah Kabupaten Trenggalek merupakan pegunungan dan menjadi lokus kemiskinan ekstrim.
+          <br><br>
+
+          SMPN 5 Trenggalek bertekad mewujudkan sekolah berbasis pendidikan karakter dan inklusif dengan integrasi inovasi
+          "KADER KEREN". Sasaran program ini adalah siswa marginal dan rentan putus sekolah yang selanjutnya disebut anak asuh.
+          <br><br>
+
+          KADER KEREN telah diadaptasi SMPN 4 Trenggalek pada program KOPI JOS (Komite Pendidikan Jasmani dan Olahraga Sekolah).
+          Program ini mengarahkan karakter anak yang sering bermain olahraga saat jam pelajaran atau jam kosong. KADER KEREN dan
+          KOPI JOS sama-sama memperbaiki karakter siswa demi menunjang keberlangsungan pendidikannya.
         </div>
       </div>
     </div>
@@ -108,7 +88,7 @@ $config = new Config();
 <!-- End Services -->
 
 <!-- Start feature_app -->
-<section class="feature_app feature_demo2 margin-t-12 padding-t-12" id="inovasi">
+<section class="feature_app feature_demo2 margin-t-12 padding-t-12" id="Inovasi">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-md-10 col-lg-6 text-center">

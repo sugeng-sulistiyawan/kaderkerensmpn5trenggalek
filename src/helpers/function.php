@@ -110,8 +110,9 @@ function build(Config $config, $page)
 
     $html = strtr(file_get_contents($config->baseUrl . '/index.php?page=' . $page), [
         $config->baseUrl => $baseUrl . '/',
-        $config->assets => $baseUrl . '/assets',
-        '/index.php?page=' . $page => $page . '.html',
+        $config->assets => './assets',
+        '/index.php?page=index' => 'index.html',
+        '/index.php?page=dokumentasi' => 'dokumentasi.html',
     ]);
 
     file_put_contents(dirname($config->root) . '/' . $page . '.html', $html);

@@ -558,7 +558,7 @@
 
     .subscribe_phone {
         .btn_app {
-            background-color: rgba($dark-color, 0.13);
+            background-color: $dark-color;
             border-radius: 8px;
             color: $white-color;
             width: 100%;
