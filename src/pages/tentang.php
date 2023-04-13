@@ -95,7 +95,12 @@ $config = new Config();
 
     <div class="table-responsive">
       <table class="table table-bordered table-hover align-middle nip-fmt">
-        <thead>
+        <tbody>
+          <tr data-toggle="collapse" data-target=".collapse0" style="cursor: pointer;">
+            <td colspan="4" class="h5 font-weight-bold py-4">🔵 STRUKTURAL</td>
+          </tr>
+        </tbody>
+        <thead class="collapse0 collapse">
           <tr class="font-weight-bold">
             <td>NO</td>
             <td>NAMA GURU</td>
@@ -103,7 +108,7 @@ $config = new Config();
             <td>JABATAN DALAM POKJA</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="collapse0 collapse">
           <tr>
             <td rowspan="2">1</td>
             <td>LILIS RATNAWATI, S.Pd.</td>
@@ -149,11 +154,13 @@ $config = new Config();
           <tr>
             <td>NIP. 196504181991032009</td>
           </tr>
-          <tr>
-            <td colspan="4" class="h4 font-weight-bold py-4">A. POKJA PRODUKSI</td>
+        </tbody>
+        <tbody>
+          <tr data-toggle="collapse" data-target=".collapse1" style="cursor: pointer;">
+            <td colspan="4" class="h5 font-weight-bold py-4">🟠 POKJA PRODUKSI</td>
           </tr>
         </tbody>
-        <thead>
+        <thead class="collapse1 collapse">
           <tr class="font-weight-bold">
             <td>NO</td>
             <td>NAMA GURU</td>
@@ -161,7 +168,7 @@ $config = new Config();
             <td>JABATAN DALAM POKJA</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="collapse1 collapse">
           <tr>
             <td rowspan="2">1</td>
             <td>Drs. HERY SUSENO</td>
@@ -198,11 +205,13 @@ $config = new Config();
           <tr>
             <td>NIP. 196504181991032009</td>
           </tr>
-          <tr>
-            <td colspan="4" class="h4 font-weight-bold py-4">B. POKJA SIRKULASI PRODUKSI</td>
+        </tbody>
+        <tbody>
+          <tr data-toggle="collapse" data-target=".collapse2" style="cursor: pointer;">
+            <td colspan="4" class="h5 font-weight-bold py-4">🟠 POKJA SIRKULASI PRODUKSI</td>
           </tr>
         </tbody>
-        <thead>
+        <thead class="collapse2 collapse">
           <tr class="font-weight-bold">
             <td>NO</td>
             <td>NAMA GURU</td>
@@ -210,7 +219,7 @@ $config = new Config();
             <td>JABATAN DALAM POKJA</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="collapse2 collapse">
           <tr>
             <td rowspan="2">1</td>
             <td>HAJAR ROHMAH, S.Pd.</td>
@@ -229,11 +238,13 @@ $config = new Config();
           <tr>
             <td>-</td>
           </tr>
-          <tr>
-            <td colspan="4" class="h4 font-weight-bold py-4">C. POKJA ORANG TUA ASUH</td>
+        </tbody>
+        <tbody>
+          <tr data-toggle="collapse" data-target=".collapse3" style="cursor: pointer;">
+            <td colspan="4" class="h5 font-weight-bold py-4">🟠 POKJA ORANG TUA ASUH</td>
           </tr>
         </tbody>
-        <thead>
+        <thead class="collapse3 collapse">
           <tr class="font-weight-bold">
             <td>NO</td>
             <td>NAMA GURU</td>
@@ -241,7 +252,7 @@ $config = new Config();
             <td>JABATAN DALAM POKJA</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="collapse3 collapse">
           <tr>
             <td rowspan="2">1</td>
             <td>Dra. HENI TRISISWATI</td>
@@ -419,31 +430,20 @@ $config = new Config();
           <tr>
           </tr>
         </tbody>
-      </table>
-    </div>
-
-  </div>
-</section>
-
-<section class="service__workspace features__workspace padding-py-6 mt-0 w-100">
-  <div class="container">
-
-    <div class="title_sections_inner text-center mt-2">
-      <h4 class="font-weight-bold">DAFTAR ANAK ASUH (BUTUH PENANGANAN INTENSIF)</h4>
-      <h6>TAHUN 2023</h6>
-    </div>
-
-    <div class="table-responsive">
-      <table class="table table-bordered table-hover table-striped">
+        <tbody>
+          <tr data-toggle="collapse" data-target=".collapse4" style="cursor: pointer;">
+            <td colspan="4" class="h5 font-weight-bold py-4">🟡 ANAK ASUH (BUTUH PENANGANAN INTENSIF) TAHUN 2023</td>
+          </tr>
+        </tbody>
         <thead>
-          <tr class="font-weight-bold">
+          <tr class="collapse4 collapse font-weight-bold">
             <td>NO INDUK</td>
             <td>NISN</td>
             <td>NAMA SISWA</td>
             <td>KELAS</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="collapse4 collapse">
           <tr>
             <td>007090</td>
             <td>3084312133</td>
@@ -573,5 +573,6 @@ $config = new Config();
         </tbody>
       </table>
     </div>
+
   </div>
 </section>
