@@ -15,8 +15,8 @@ $config = new Config();
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan" />
-  <meta name="keywords" content="Inklusi Sosial, KADEr KEREN, SMPN 5 Trenggalek" />
-  <meta name="author" content="KADEr KEREN SMPN 5 Trenggalek" />
+  <meta name="keywords" content="Inklusi Sosial, Kader Keren, SMPN 5 Trenggalek" />
+  <meta name="author" content="Kader Keren SMPN 5 Trenggalek" />
 
   <title><?= $config->title ?></title>
   <!-- favicon -->
@@ -74,6 +74,12 @@ $config = new Config();
             <a class="navbar-brand" href="<?= $config->baseUrl ?>">
               <img class="logo" src="<?= $config->assets ?>/logo.png?version=<?= $config->version ?>" alt="logo" />
             </a>
+
+            <div class="d-lg-none nav_account btn_demo3 ml-auto mr-2">
+              <a href="<?= $config->whatsappUrl() ?>" class="btn btn-dark bg-blue btn-sm effect-letter rounded-5" target="_blank" rel="noopener noreferrer">
+                Admin Whatsapp
+              </a>
+            </div>
 
             <button class="navbar-toggler menu ripplemenu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <svg viewBox="0 0 64 48">
