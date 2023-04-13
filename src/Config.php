@@ -7,7 +7,7 @@ use yii\web\Request;
 
 class Config extends Component
 {
-    public $version = "1.0.0";
+    public $version;
     public $root;
     public $baseUrl = 'http://localhost/kaderkerensmpn5trenggalek/src/public';
     public $assets = '../../assets';

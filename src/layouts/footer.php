@@ -37,7 +37,7 @@ $config = new Config();
 <!-- Start Section Loader -->
 <section class="loading_overlay<?= $config->prod ? '' : ' d-none' ?>">
     <div class="loader_logo">
-        <img class="logo" src="<?= $config->assets ?>/favicon.png?version=<?= $config->version ?>" />
+        <img class="logo" src="<?= $config->assets ?>/favicon.png" />
     </div>
 </section>
 <!-- End. Loader -->

@@ -51,6 +51,53 @@ if (!function_exists('dd_export')) {
 }
 
 /**
+ * ====================
+ *
+ * MINIFY
+ * 
+ * ====================
+ */
+
+if (!function_exists('minifyHtml')) {
+    /**
+     * Html Minify
+     *
+     * @param string $input 
+     * @return string
+     */
+    function minifyHtml($input)
+    {
+        return \Minify_HTML::minify($input);
+    }
+}
+
+if (!function_exists('minifyCss')) {
+    /**
+     * CSS Minify
+     *
+     * @param string $input 
+     * @return string
+     */
+    function minifyCss($input)
+    {
+        return \Minify_CSSmin::minify($input);
+    }
+}
+
+if (!function_exists('minifyJs')) {
+    /**
+     * JS Minify
+     *
+     * @param string $input 
+     * @return string
+     */
+    function minifyJs($input)
+    {
+        return \JSMin\JSMin::minify($input);
+    }
+}
+
+/**
  * 
  */
 function build(Config $config, $page)
@@ -90,13 +137,13 @@ function concatCss()
     $out = '';
     $concat = '';
     foreach ($css as $key => $value) {
-        $out .= "  <link rel=\"stylesheet\" href=\"{$config->assets}{$value}?version={$config->version}\" type=\"text/css\" />\n";
+        $out .= "  <link rel=\"stylesheet\" href=\"{$config->assets}{$value}?v={$config->version}\" type=\"text/css\" />\n";
         $concat .= file_get_contents("{$config->assets}{$value}") . "\n";
     }
 
     if ($config->prod) {
-        file_put_contents(dirname($config->root) . '/assets/css/app.css', $concat);
-        echo "  <link rel=\"stylesheet\" href=\"{$config->assets}/css/app.css?version={$config->version}\" type=\"text/css\" />\n";
+        file_put_contents(dirname($config->root) . '/assets/css/app.css', minifyCss($concat));
+        echo "  <link rel=\"stylesheet\" href=\"{$config->assets}/css/app.css?v={$config->version}\" type=\"text/css\" />\n";
     } else {
         echo $out;
     }
@@ -108,8 +155,8 @@ function concatCss()
 function concatJs()
 {
     $config = new Config();
-    $css = [
-        '/js/jquery-3.6.4.slim.min.js',
+    $js = [
+        '/js/jquery-3.6.4.min.js',
         '/js/jquery-migrate-3.4.0.min.js',
         '/js/bootstrap.bundle.min.js',
         '/js/particles.min.js',
@@ -128,19 +175,23 @@ function concatJs()
         '/js/sharer.min.js',
         '/js/sticky.min.js',
         '/js/aos.js',
-        '/js/main.min.js',
+        '/js/main.js',
     ];
+
+    if ($config->isPage('index')) {
+        $js[] = '/js/pages/mobile.js';
+    }
 
     $out = '';
     $concat = '';
-    foreach ($css as $key => $value) {
-        $out .= "  <script src=\"{$config->assets}{$value}?version={$config->version}\" type=\"text/javascript\"></script>\n";
+    foreach ($js as $key => $value) {
+        $out .= "  <script src=\"{$config->assets}{$value}?v={$config->version}\" type=\"text/javascript\"></script>\n";
         $concat .= file_get_contents("{$config->assets}{$value}") . "\n";
     }
 
     if ($config->prod) {
-        file_put_contents(dirname($config->root) . '/assets/js/app.js', $concat);
-        echo "  <script src=\"{$config->assets}/js/app.js?version={$config->version}\" type=\"text/javascript\"></script>\n";
+        file_put_contents(dirname($config->root) . '/assets/js/app.js', minifyJs($concat));
+        echo "  <script src=\"{$config->assets}/js/app.js?v={$config->version}\" type=\"text/javascript\"></script>\n";
     } else {
         echo $out;
     }
