@@ -38,23 +38,24 @@ class Config extends Component
      */
     public static function whatsappUrl(string $text = ''): string
     {
-        return 'https://wa.me/' . static::phonePretty() . ($text ? '?text=' . urldecode($text) : '');
+        return 'https://wa.me/' . static::phonePretty(true, true) . ($text ? '?text=' . urldecode($text) : '');
     }
 
     /**
      * 
      */
-    public static function phonePretty(): string
+    public static function phonePretty($hideSpace = false, $hidePlus = false): string
     {
-        return static::$_phone;
-    }
+        $search = [];
 
-    /**
-     * 
-     */
-    public static function phone(): string
-    {
-        return str_replace(' ', '', static::phonePretty());
+        if ($hideSpace) {
+            $search[] = ' ';
+        }
+        if ($hidePlus) {
+            $search[] = '+';
+        }
+
+        return str_replace($search, '', static::$_phone);
     }
 
     /**
