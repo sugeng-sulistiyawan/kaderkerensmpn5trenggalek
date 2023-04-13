@@ -3166,8 +3166,12 @@ header .navbar .navbar-brand {
 }
 header .navbar .navbar-brand .logo {
   vertical-align: bottom;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
   max-height: 60px;
+}
+header .navbar .navbar-brand .navbar-text {
+  font-size: 0.75rem;
+  padding-bottom: 0.7rem;
 }
 header .navbar .navbar-collapse {
   margin-top: 0.4rem;

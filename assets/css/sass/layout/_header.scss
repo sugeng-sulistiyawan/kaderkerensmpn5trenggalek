@@ -73,8 +73,12 @@ header {
       font-size: 22px;
       .logo {
         vertical-align: bottom;
-        margin-right: 0.5rem;
+        margin-right: 0.25rem;
         max-height: 60px;
+      }
+      .navbar-text {
+        font-size: 0.75rem;
+        padding-bottom: 0.7rem;
       }
     }
     .navbar-collapse {

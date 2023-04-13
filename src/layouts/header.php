@@ -72,7 +72,11 @@ $config = new Config();
           <!-- navbar -->
           <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
             <a class="navbar-brand" href="<?= $config->baseUrl ?>">
-              <img class="logo" src="<?= $config->assets ?>/logo.png?version=<?= $config->version ?>" alt="logo" />
+              <img class="logo" src="<?= $config->assets ?>/logo.png?version=<?= $config->version ?>" alt="" />
+              <div class="navbar-text font-weight-bold my-auto d-lg-none">
+                <span class="c-blue">KADEr</span>
+                <span class="c-yollow">KEREN</span>
+              </div>
             </a>
 
             <div class="d-lg-none nav_account btn_demo3 ml-auto mr-2">
