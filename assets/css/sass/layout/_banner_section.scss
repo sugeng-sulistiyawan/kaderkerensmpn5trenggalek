@@ -600,7 +600,7 @@
             right: 5%;
 
             @include maxMobile {
-                right: -5%;
+                right: 0;
                 top: 5%;
                 width: 100%;
             }
@@ -1014,7 +1014,7 @@
   banner_cotact_one
 -----------------------------*/
 .banner_cotact_one {
-    background-color: #240041;
+    background-color: $white-color;
     position: relative;
     padding-bottom: 35rem;
 
@@ -1178,7 +1178,6 @@
 
         @include overlay;
 
-        background-color: rgba($black-color, 0.25);
         z-index: 1;
     }
 
@@ -1196,11 +1195,6 @@
     .banner_title_inner {
         position: relative;
         z-index: 2;
-
-        h1,
-        p {
-            color: $white-color;
-        }
     }
 }
 

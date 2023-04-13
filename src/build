@@ -24,6 +24,8 @@ $config = new Config();
 
 foreach ([
     'index',
+    'dokumentasi',
+    'tentang',
 ] as $page) {
     echo "build {$page} ...";
     try {

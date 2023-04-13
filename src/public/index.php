@@ -25,15 +25,20 @@ require $config->root . '/layouts/header.php';
 
 $page = $config->getPage();
 switch ($page) {
-    case 'value':
-        # code...
+    case 'dokumentasi':
+        $config->title = 'Dokumentasi - KADEr KEREN SMPN 5 Trenggalek';
+        break;
+
+    case 'tentang':
+        $config->title = 'Tentang Kami - KADEr KEREN SMPN 5 Trenggalek';
         break;
 
     default:
         $page = 'index';
-        require $config->root . '/pages/index.php';
         break;
 }
+
+require $config->root . '/pages/' . $page . '.php';
 
 require $config->root . '/layouts/footer.php';
 

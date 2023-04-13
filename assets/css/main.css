@@ -3114,6 +3114,7 @@ img {
   Style header Default
 -----------------------------*/
 header {
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 9;
   position: fixed;
   top: 0;
@@ -4166,7 +4167,7 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
 }
 @media (max-width: 767px) {
   .banner_demo8 .ill_appMobile .ill_user {
-    right: -5%;
+    right: 0;
     top: 5%;
     width: 100%;
   }
@@ -4541,7 +4542,7 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
   banner_cotact_one
 -----------------------------*/
 .banner_cotact_one {
-  background-color: #240041;
+  background-color: #ffffff;
   position: relative;
   padding-bottom: 35rem;
 }
@@ -4688,7 +4689,6 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 .banner_px_image .parallax_cover {
@@ -4703,10 +4703,6 @@ header .navbar .navbar-collapse .nav_account.btn_demo3 .btn_sm_primary {
 .banner_px_image .banner_title_inner {
   position: relative;
   z-index: 2;
-}
-.banner_px_image .banner_title_inner h1,
-.banner_px_image .banner_title_inner p {
-  color: #ffffff;
 }
 
 /*-----------------------------

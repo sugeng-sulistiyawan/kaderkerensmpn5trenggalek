@@ -25,7 +25,7 @@ $config = new Config();
             <a class="nav-link" href="<?= $config->getBasePage('dokumentasi') ?>">Dokumentasi</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= $config->getBasePage('dokumentasi') ?>">Dokumentasi</a>
+            <a class="nav-link" href="<?= $config->getBasePage('tentang') ?>">Tentang Kami</a>
         </li>
     </ul>
     <div class="nav_account btn_demo3">

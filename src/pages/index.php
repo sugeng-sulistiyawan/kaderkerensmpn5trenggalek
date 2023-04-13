@@ -12,8 +12,8 @@ $config = new Config();
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-lg-5 order-2 order-lg-1">
-        <div class="banner_title">
-          <h1 class="c-blue">
+        <div class="banner_title text-center text-sm-left">
+          <h1 class="c-blue mt-0 mt-sm-4">
             KADEr
             <span class="c-yollow">KEREN.</span>
           </h1>
@@ -25,10 +25,9 @@ $config = new Config();
             <div class="row">
               <div class="col-md-8">
                 <div class="button--click">
-                  <a href="<?= $config->whatsappUrl() ?>" class="btn btn_app btn_xl_primary scale c-gradient btn-primary" target="_blank" rel="noopener noreferrer">
-                    Hubungi Admin
-                    <div class="text-monospace">
-                      <?= $config->phonePretty() ?>
+                  <a href="<?= $config->whatsappUrl() ?>" class="btn btn_md_primary sweep_top sweep_letter bg-orange-red c-white rounded-8 d-block">
+                    <div class="inside_item">
+                      <span data-hover="<?= $config->phonePretty() ?>">Hubungi Admin</span>
                     </div>
                   </a>
                 </div>
@@ -36,8 +35,8 @@ $config = new Config();
             </div>
           </div>
           <div class="mt-5 text-center text-sm-left">
-            <a href="#ProgramInovasi" class="h4 font-weight-bold d-block c-orange-red">#ProgramInovasi</a>
-            <a href="#AksiInovasi" class="h4 font-weight-bold d-block c-blue">#AksiInovasi</a>
+            <a href="#ProgramInovasi" class="h4 font-weight-bold d-block c-orange-red">#Program<span class="c-gold">Inovasi</span></a>
+            <a href="#AksiInovasi" class="h4 font-weight-bold d-block c-blue">#Aksi<span class="c-gold">Inovasi</span></a>
           </div>
         </div>
       </div>
@@ -45,7 +44,7 @@ $config = new Config();
         <div class="ill_appMobile">
           <img class="ill_app" src="<?= $config->assets ?>/img/app/c_app.svg" />
           <img class="ill_bg" src="<?= $config->assets ?>/img/app/background.svg" />
-          <img class="ill_user" src="<?= $config->assets ?>/refs/slider1.png" />
+          <img class="ill_user" src="<?= $config->assets ?>/refs/slider-1.png" />
         </div>
       </div>
     </div>

@@ -113,6 +113,7 @@ function build(Config $config, $page)
         $config->assets => './assets',
         '/index.php?page=index' => 'index.html',
         '/index.php?page=dokumentasi' => 'dokumentasi.html',
+        '/index.php?page=tentang' => 'tentang.html',
     ]);
 
     file_put_contents(dirname($config->root) . '/' . $page . '.html', $html);
