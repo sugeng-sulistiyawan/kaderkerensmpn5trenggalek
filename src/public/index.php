@@ -10,13 +10,11 @@
 
 use app\Config;
 
-$Root = dirname(dirname(__DIR__));
-$App  = $Root . '/src';
+$root = dirname(__DIR__);
 
-
-require $Root . '/vendor/autoload.php';
-require $Root . '/vendor/yiisoft/yii2/Yii.php';
-require $App . '/helpers/function.php';
+require $root . '/vendor/autoload.php';
+require $root . '/vendor/yiisoft/yii2/Yii.php';
+require $root . '/helpers/function.php';
 
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');

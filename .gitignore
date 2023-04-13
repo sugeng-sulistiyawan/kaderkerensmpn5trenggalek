@@ -1,8 +1,3 @@
-# yii console commands
-/yii
-/yii_test
-/yii_test.bat
-
 # phpstorm project files
 .idea
 
@@ -19,12 +14,13 @@ Thumbs.db
 
 # composer vendor dir
 /vendor
+/src/vendor
 
 # composer itself is not needed
-composer.phar
+/src/composer.phar
 
 # composer lock
-composer.lock
+/src/composer.lock
 
 # Mac DS_Store Files
 .DS_Store
