@@ -36,7 +36,7 @@ class Config extends Component
     /**
      * 
      */
-    public static function whatsappUrl(string $text = ''): string
+    public static function whatsappUrl(string $text = "Hallo Kak, saya mau tanya-tanya dong :)\n"): string
     {
         return 'https://wa.me/' . static::phonePretty(true, true) . ($text ? '?text=' . urldecode($text) : '');
     }
