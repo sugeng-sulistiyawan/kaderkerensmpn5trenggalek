@@ -7,7 +7,7 @@ use yii\web\Request;
 
 class Config extends Component
 {
-    public $version;
+    public $version = "1.0.0";
     public $root;
     public $baseUrl = 'http://localhost/kaderkerensmpn5trenggalek/src/public';
     public $assets = '../../assets';
@@ -18,6 +18,8 @@ class Config extends Component
     /** @var Request */
     public $request;
 
+    public $prod;
+
     private static $_phone = '+6282 334 662 442';
 
     /**
@@ -27,10 +29,11 @@ class Config extends Component
     {
         parent::init();
 
-        $this->version = time();
+        $this->version = $this->version ?? time();
         $this->root = __DIR__;
 
         $this->request = new Request();
+        $this->prod = $this->request->get('prod') == 1;
     }
 
     /**

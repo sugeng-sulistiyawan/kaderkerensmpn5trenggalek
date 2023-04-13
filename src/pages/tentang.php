@@ -106,7 +106,7 @@ $config = new Config();
         <tbody>
           <tr>
             <td rowspan="2">1</td>
-            <td>LILIS RATNAWATI, S. Pd.</td>
+            <td>LILIS RATNAWATI, S.Pd.</td>
             <td rowspan="2">Pembina Tk 1/IVb</td>
             <td rowspan="2">Penanggung Jawab</td>
           </tr>

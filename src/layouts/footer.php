@@ -35,7 +35,7 @@ $config = new Config();
 </div>
 
 <!-- Start Section Loader -->
-<section class="loading_overlay d-none">
+<section class="loading_overlay<?= $config->prod ? '' : ' d-none' ?>">
     <div class="loader_logo">
         <img class="logo" src="<?= $config->assets ?>/favicon.png?version=<?= $config->version ?>" />
     </div>
@@ -44,52 +44,6 @@ $config = new Config();
 </div>
 <!-- End. wrapper -->
 
-<!-- jquery -->
-<script src="<?= $config->assets ?>/js/jquery-3.6.4.slim.min.js" type="text/javascript"></script>
-<!-- jquery-migrate -->
-<script src="<?= $config->assets ?>/js/jquery-migrate-3.4.0.min.js" type="text/javascript"></script>
-<!-- bootstrap -->
-<script src="<?= $config->assets ?>/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<!--
-  ============
-  vendor file
-  ============
-   -->
-<!-- particles -->
-<script src="<?= $config->assets ?>/js/vendor/particles.min.js" type="text/javascript"></script>
-<!-- TweenMax -->
-<script src="<?= $config->assets ?>/js/vendor/TweenMax.min.js" type="text/javascript"></script>
-<!-- ScrollMagic -->
-<script src="<?= $config->assets ?>/js/vendor/ScrollMagic.js" type="text/javascript"></script>
-<!-- animation.gsap -->
-<script src="<?= $config->assets ?>/js/vendor/animation.gsap.js" type="text/javascript"></script>
-<!-- addIndicators -->
-<script src="<?= $config->assets ?>/js/vendor/debug.addIndicators.min.js" type="text/javascript"></script>
-<!-- Swiper js -->
-<script src="<?= $config->assets ?>/js/vendor/swiper.min.js" type="text/javascript"></script>
-<!-- countdown -->
-<script src="<?= $config->assets ?>/js/vendor/countdown.js" type="text/javascript"></script>
-<!-- simpleParallax -->
-<script src="<?= $config->assets ?>/js/vendor/simpleParallax.min.js" type="text/javascript"></script>
-<!-- waypoints -->
-<script src="<?= $config->assets ?>/js/vendor/waypoints.min.js" type="text/javascript"></script>
-<!-- counterup -->
-<script src="<?= $config->assets ?>/js/vendor/jquery.counterup.min.js" type="text/javascript"></script>
-<!-- charming -->
-<script src="<?= $config->assets ?>/js/vendor/charming.min.js" type="text/javascript"></script>
-<!-- imagesloaded -->
-<script src="<?= $config->assets ?>/js/vendor/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-<!-- BX-Slider -->
-<script src="<?= $config->assets ?>/js/vendor/jquery.bxslider.min.js" type="text/javascript"></script>
-<!-- Sharer -->
-<script src="<?= $config->assets ?>/js/vendor/sharer.js" type="text/javascript"></script>
-<!-- sticky -->
-<script src="<?= $config->assets ?>/js/vendor/sticky.min.js" type="text/javascript"></script>
-<!-- Aos -->
-<script src="<?= $config->assets ?>/js/vendor/aos.js" type="text/javascript"></script>
-<!-- main file -->
-<script src="<?= $config->assets ?>/js/main.min.js?version=<?= $config->version ?>" type="text/javascript"></script>
-<!-- mobile -->
-<script src="<?= $config->assets ?>/js/pages/mobile.js?version=<?= $config->version ?>" type="text/javascript"></script>
+<?php concatJs(); ?>
 
 </body>
