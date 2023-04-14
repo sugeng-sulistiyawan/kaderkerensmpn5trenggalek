@@ -16,11 +16,11 @@ class BuildController extends Controller
     public function actionIndex()
     {
         $pages = [
-            // 'index',
-            // 'dokumentasi',
+            'index',
+            'dokumentasi',
             'tentang',
-            // 'inovasi',
-            // 'data-hasil',
+            'inovasi',
+            'data-hasil',
         ];
         $replace = [
             '/site/index'       => 'index.html',
