@@ -9,5 +9,5 @@
 /tests 				export-ignore
 /html 	            export-ignore
 /src 	            export-ignore
-/logo.cdr 	        export-ignore
+/app     	        export-ignore
 
