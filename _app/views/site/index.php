@@ -42,8 +42,8 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                         </div>
                     </div>
                     <div class="mt-5 text-center text-sm-left">
-                        <a href="#ProgramInovasi" class="h4 font-weight-bold d-block c-orange-red">#Program<span class="c-gold">Inovasi</span></a>
-                        <a href="#AksiInovasi" class="h4 font-weight-bold d-block c-blue">#Aksi<span class="c-gold">Inovasi</span></a>
+                        <a href="#Inovasi" class="h4 font-weight-bold d-block c-orange-red">#Program<span class="c-gold">Inovasi</span></a>
+                        <a href="#Inovasi" class="h4 font-weight-bold d-block c-blue">#Aksi<span class="c-gold">Inovasi</span></a>
                     </div>
                 </div>
             </div>
@@ -106,39 +106,15 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
         <div class="row justify-content-md-center">
             <div class="col-md-10 col-lg-6 text-center">
                 <div class="title_sections">
-                    <div class="before_title">
-                        <span>Rakon.</span>
-                        <span class="c-gold">Products</span>
+                    <div class="before_title font-weight-bold">
+                        <span>#Program</span>
+                        <span class="c-orange">#Aksi</span>
+                        <span class="c-yollow">#Inovasi</span>
                     </div>
-                    <h2>Start your experience with Rakon.</h2>
+                    <h2>Ayo Support Produk, Kegiatan dan Karya Kami</h2>
                     <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur.
+                        Program inklusi dengan support aplikasi marketing berbasis web yang memprioritaskan peningkatan karakter positif dan kecerdasan finansial bagi anak-anak marjinal dan rentan putus sekolah level SMP.
                     </p>
-                    <div class="z_apps">
-                        <a href="#" target="_blank" class="item__app bg_apple mb-3 mb-sm-0">
-                            <div class="media">
-                                <i class="tio apple icon"></i>
-                                <div class="media-body">
-                                    <div class="txt">
-                                        <span>Available on the</span>
-                                        <h4>App Store</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" target="_blank" class="item__app bg_google">
-                            <div class="media">
-                                <img class="icon" src="/web/img/icons/google-play.svg" />
-                                <div class="media-body">
-                                    <div class="txt">
-                                        <span>Get it on</span>
-                                        <h4>Google Play</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -148,27 +124,27 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                     <div class="img_bbo">
                         <img src="/web/img/app/01.png" />
                     </div>
-                    <h3>Multigrain Hot Cereal</h3>
+                    <h3>POT SERABUT KELAPA </h3>
                     <p class="c-blue">
-                        $14
+                        KODE: 21.8.4
                     </p>
                 </div>
                 <div class="item_box item_two">
                     <div class="img_bbo">
                         <img src="/web/img/app/02.png" />
                     </div>
-                    <h3>Branch Special</h3>
+                    <h3>LAMPU HIAS</h3>
                     <p class="c-green">
-                        $27
+                        KODE: 21.8.1
                     </p>
                 </div>
                 <div class="item_box item_three">
                     <div class="img_bbo">
                         <img src="/web/img/app/03.png" />
                     </div>
-                    <h3>French Crostini</h3>
-                    <p class="c-red">
-                        $22
+                    <h3>LAMPU HIAS</h3>
+                    <p class="c-green">
+                        KODE: 21.8.1
                     </p>
                 </div>
             </div>
@@ -182,31 +158,121 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                     <div class="img_bbo">
                         <img src="/web/img/app/04.png" />
                     </div>
-                    <h3>Fried Egg Sandwich</h3>
-                    <p class="c-aquamarine">
-                        $25
+                    <h3>BEL KAYU</h3>
+                    <p class="c-green">
+                        KODE: 21.8.2
                     </p>
                 </div>
                 <div class="item_box item_five">
                     <div class="img_bbo">
                         <img src="/web/img/app/05.png" />
                     </div>
-                    <h3>Branch Special</h3>
+                    <h3>TEMPAT PENSIL/PULPEN</h3>
                     <p class="c-blue">
-                        $14
+                        KODE: 19.7.1
                     </p>
                 </div>
                 <div class="item_box item_six">
                     <div class="img_bbo">
                         <img src="/web/img/app/06.png" />
                     </div>
-                    <h3>Lemon Yogurt Parfait</h3>
+                    <h3>KAPAL HIAS</h3>
                     <p class="c-orange">
-                        $29
+                        KODE: 21.8.4
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="<?= Url::toRoute('inovasi') ?>" class="btn btn_lg_primary effect-letter rounded-8 margin-t-4 bg-dark c-white mx-2">
+                Temukan Produk dan Katalog Kami
+            </a>
+            <a href="<?= Url::toRoute('data-hasil') ?>" class="btn btn_lg_primary effect-letter rounded-8 margin-t-4 bg-orange c-white mx-2">
+                Lihat Data & Hasil Transaksi Kami
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- End. feature_app -->
+
+
+<!-- Start test_monials__workspace -->
+<section class="test_monials__workspace margin-t-2 padding-t-10 pb-3" id="Testimonials">
+    <div class="container-fluid">
+        <div class="box__others">
+            <div class="row">
+                <div class="col-lg-5 pl-lg-0">
+                    <div class="img__people">
+                        <img src="/web/img/workspace/others.svg" alt="">
+                        <div class="col-lg-5 item_title">
+                            <div class="title_sections">
+                                <div class="before_title">
+                                    <span class="c-orange-red">Dokumentasi Inovasi</span>
+                                </div>
+                                <h2>Riwayat Transaksi</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 my-lg-auto mx-auto">
+                    <div class="people__say">
+                        <div class="swiper-container gallery-top swipe_circle">
+                            <!-- item Users -->
+                            <div class="person_thumbs">
+                                <div class="swiper-wrapper" style="left: -5%;">
+                                    <div class="swiper-slide">
+                                        <img class="pagination rounded-circle" src="/web/img/persons/01.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="pagination rounded-circle" src="/web/img/persons/02.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="pagination rounded-circle" src="/web/img/persons/03.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="pagination rounded-circle" src="/web/img/persons/04.png" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="pagination rounded-circle" src="/web/img/persons/05.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item content -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/web/refs/trx-1.png" alt="" style="width: 100%; max-width: 300px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/web/refs/trx-2.png" alt="" style="width: 100%; max-width: 300px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/web/refs/trx-3.png" alt="" style="width: 100%; max-width: 300px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/web/refs/trx-5.png" alt="" style="width: 100%; max-width: 300px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/web/refs/trx-4.png" alt="" style="width: 100%; max-width: 300px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/web/refs/trx-6.png" alt="" style="width: 100%; max-width: 300px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simple__particles">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- End Swiper -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- End. feature_app -->
+<!-- End. test_monials__workspace -->
