@@ -83,7 +83,7 @@ $this->registerJsFile('/web/js/pages/mobile.js', [
                     "KADER KEREN". Sasaran program ini adalah siswa marginal dan rentan putus sekolah yang selanjutnya disebut anak asuh.
                     <br><br>
 
-                    KADER KEREN telah diadaptasi SMPN 4 Trenggalek pada program KOPI JOS (Komite Pendidikan Jasmani dan Olahraga Sekolah).
+                    KADER KEREN telah diadaptasi SMPN 5 Trenggalek pada program KOPI JOS (Komite Pendidikan Jasmani dan Olahraga Sekolah).
                     Program ini mengarahkan karakter anak yang sering bermain olahraga saat jam pelajaran atau jam kosong. KADER KEREN dan
                     KOPI JOS sama-sama memperbaiki karakter siswa demi menunjang keberlangsungan pendidikannya.
                 </div>
