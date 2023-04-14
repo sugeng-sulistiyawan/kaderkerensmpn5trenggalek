@@ -2,9 +2,15 @@
 
 /** @var yii\web\View $this */
 
+use app\assets\AppAsset;
 use yii\helpers\Url;
 
 $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan';
+
+
+$this->registerJsFile('/web/js/pages/mobile.js', [
+    'depends' => [AppAsset::class],
+]);
 
 ?>
 
