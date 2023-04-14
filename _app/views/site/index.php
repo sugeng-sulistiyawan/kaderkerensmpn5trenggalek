@@ -185,10 +185,10 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
         </div>
 
         <div class="text-center mt-5">
-            <a href="<?= Url::toRoute('inovasi') ?>" class="btn btn_lg_primary effect-letter rounded-8 margin-t-4 bg-dark c-white mx-2">
+            <a href="<?= Url::toRoute('inovasi') ?>" class="btn btn_lg_primary effect-letter rounded-8 bg-dark c-white m-2">
                 Temukan Produk dan Katalog Kami
             </a>
-            <a href="<?= Url::toRoute('data-hasil') ?>" class="btn btn_lg_primary effect-letter rounded-8 margin-t-4 bg-orange c-white mx-2">
+            <a href="<?= Url::toRoute('data-hasil') ?>" class="btn btn_lg_primary effect-letter rounded-8 bg-orange c-white m-2">
                 Lihat Data & Hasil Transaksi Kami
             </a>
         </div>
