@@ -21,26 +21,7 @@ dd($config->getTitle());
 
   <title><?= $config->title ?></title>
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="<?= $config->assets ?>/img/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="57x57" href="<?= $config->assets ?>/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="<?= $config->assets ?>/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<?= $config->assets ?>/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="<?= $config->assets ?>/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?= $config->assets ?>/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="<?= $config->assets ?>/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="<?= $config->assets ?>/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="<?= $config->assets ?>/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?= $config->assets ?>/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="<?= $config->assets ?>/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?= $config->assets ?>/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="<?= $config->assets ?>/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?= $config->assets ?>/favicon-16x16.png">
-  <link rel="manifest" href="<?= $config->assets ?>/manifest.json">
-  <meta name="msapplication-TileColor" content="#0f1b57">
-  <meta name="msapplication-TileImage" content="<?= $config->assets ?>/ms-icon-144x144.png">
-  <meta name="theme-color" content="#0f1b57">
-  <meta property="og:image" content="<?= $config->assets ?>/og.png" />
+  
   <?php echo "\n";
   concatCss(); ?>
 
@@ -53,43 +34,3 @@ dd($config->getTitle());
 </head>
 
 <body>
-  <div id="wrapper">
-    <div id="content">
-      <!-- Start header -->
-      <header class="header-nav-center active-blue" id="myNavbar">
-        <div class="container">
-          <!-- navbar -->
-          <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
-            <a class="navbar-brand" href="<?= $config->baseUrl ?>">
-              <img class="logo" src="<?= $config->assets ?>/logo.png" alt="" />
-              <div class="navbar-text font-weight-bold my-auto d-lg-none">
-                <span class="c-blue">KADER</span>
-                <span class="c-yollow">KEREN</span>
-              </div>
-            </a>
-
-            <div class="d-lg-none nav_account btn_demo3 ml-auto mr-2">
-              <a href="<?= $config->whatsappUrl() ?>" class="btn btn-dark bg-blue btn-sm effect-letter rounded-5" target="_blank" rel="noopener noreferrer">
-                Admin Whatsapp
-              </a>
-            </div>
-
-            <button class="navbar-toggler menu ripplemenu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <svg viewBox="0 0 64 48">
-                <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
-                <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
-                <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
-              </svg>
-            </button>
-
-            <?php require __DIR__ . '/menu.php' ?>
-
-          </nav>
-          <!-- End Navbar -->
-        </div>
-        <!-- end container -->
-      </header>
-      <!-- End header -->
-
-      <!-- Stat main -->
-      <main data-spy="scroll" data-target="#navbar-example2" data-offset="0">

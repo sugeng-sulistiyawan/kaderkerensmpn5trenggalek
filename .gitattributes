@@ -8,6 +8,6 @@
 /.scrutinizer.yml   export-ignore
 /tests 				export-ignore
 /html 	            export-ignore
-/src 	            export-ignore
+/web 	            export-ignore
 /app     	        export-ignore
 

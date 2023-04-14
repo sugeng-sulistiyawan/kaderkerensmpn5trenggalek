@@ -1,5 +1,7 @@
 <?php
 
+use yii\console\controllers\ServeController;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
@@ -27,6 +29,13 @@ $config = [
         'db' => $db,
     ],
     'params' => $params,
+    
+    'controllerMap' => [
+        'serve' => [
+            'class' => ServeController::class,
+            'docroot' => dirname(dirname(__DIR__)),
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
