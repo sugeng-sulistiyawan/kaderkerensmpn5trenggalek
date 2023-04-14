@@ -15,41 +15,34 @@ class BuildController extends Controller
      */
     public function actionIndex()
     {
-
-        // $baseUrl = 'https://kaderkerensmpn5trenggalek.my.id';
-        $baseUrl = '';
-
         $pages = [
-            'index',
-            'dokumentasi',
+            // 'index',
+            // 'dokumentasi',
             'tentang',
-            'inovasi',
-            'data-hasil',
+            // 'inovasi',
+            // 'data-hasil',
         ];
         $replace = [
-            // $config->baseUrl              => $baseUrl . '/',
-            // $config->assets               => './assets',
-            '/index.php?page=index'       => 'index.html',
-            '/index.php?page=dokumentasi' => 'dokumentasi.html',
-            '/index.php?page=tentang'     => 'tentang.html',
-            '/index.php?page=inovasi'     => 'inovasi.html',
-            '/index.php?page=data-hasil'  => 'data-hasil.html',
+            '/site/index'       => 'index.html',
+            '/site/dokumentasi' => 'dokumentasi.html',
+            '/site/tentang'     => 'tentang.html',
+            '/site/inovasi'     => 'inovasi.html',
+            '/site/data-hasil'  => 'data-hasil.html',
         ];
         foreach ($pages as $page) {
             echo "build {$page} ...";
             try {
-                $content = file_get_contents($config->baseUrl . '/index.php?prod=1&page=' . $page);
+                $content = file_get_contents("http://localhost:8080/site/{$page}?prod=1");
 
                 $html = strtr($content, $replace);
 
-                file_put_contents(dirname($config->root) . '/' . $page . '.html', $html);
+                file_put_contents(dirname(dirname(__DIR__)) . '/' . $page . '.html', $html);
             } catch (\Throwable $th) {
                 echo " error\n{$th->getMessage()}";
                 exit;
             }
             echo " success\n";
         }
-
 
         return ExitCode::OK;
     }

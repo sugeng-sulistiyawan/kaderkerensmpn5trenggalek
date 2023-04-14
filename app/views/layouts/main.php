@@ -9,11 +9,11 @@ use yii\helpers\Url;
 
 AppAsset::register($this);
 
-$this->registerCsrfMetaTags();
+// $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
-$this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
-$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
+// $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
+// $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 // $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 
 ?>
@@ -23,6 +23,10 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_k
 
 <head>
     <title><?= Html::encode($this->title) ?></title>
+
+    <meta name="description" content="Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan" />
+    <meta name="keywords" content="Inklusi Sosial, KADER KEREN, SMPN 5 Trenggalek" />
+    <meta name="author" content="KADER KEREN SMPN 5 Trenggalek" />
 
     <!-- favicon -->
     <link rel="shortcut icon" href="/web/img/favicon.ico" type="image/x-icon" />
@@ -50,6 +54,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_k
 
 <body class="d-flex flex-column h-100">
     <?php $this->beginBody() ?>
+
     <div id="wrapper">
         <div id="content">
             <!-- Start header -->

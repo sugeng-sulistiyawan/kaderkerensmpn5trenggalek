@@ -100,7 +100,7 @@ if (!function_exists('minifyJs')) {
  */
 function whatsappUrl(string $text = "Hallo Kak, saya mau tanya-tanya dong :)\n"): string
 {
-    return 'https://wa.me/' . phonePretty(true, true) . ($text ? '?text=' . urldecode($text) : '');
+    return 'https://wa.me/' . phonePretty(true, true) . ($text ? '?text=' . urlencode($text) : '');
 }
 
 /**
