@@ -62,7 +62,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                 <div class="container">
                     <!-- navbar -->
                     <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
-                        <a class="navbar-brand" href="/">
+                        <a class="navbar-brand mr-1" href="/">
                             <img class="logo" src="/web/logo.png" alt="" />
                             <div class="navbar-text font-weight-bold my-auto d-lg-none">
                                 <span class="c-blue">KADER</span>
@@ -70,7 +70,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                             </div>
                         </a>
 
-                        <div class="d-lg-none nav_account btn_demo3 ml-auto mr-2">
+                        <div class="d-lg-none nav_account btn_demo3 ml-auto mr-1">
                             <a href="<?= whatsappUrl() ?>" class="btn btn-dark bg-blue btn-sm effect-letter rounded-5" target="_blank" rel="noopener noreferrer">
                                 Admin Whatsapp
                             </a>
@@ -83,7 +83,6 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                                 <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
                             </svg>
                         </button>
-
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mx-auto nav-pills">
