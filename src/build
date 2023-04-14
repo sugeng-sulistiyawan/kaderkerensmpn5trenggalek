@@ -22,14 +22,33 @@ defined('YII_ENV') or define('YII_ENV', 'prod');
 
 $config = new Config();
 
-foreach ([
+// $baseUrl = 'https://kaderkerensmpn5trenggalek.my.id';
+$baseUrl = '';
+
+$pages = [
     'index',
     'dokumentasi',
     'tentang',
-] as $page) {
+    'inovasi',
+    'data-hasil',
+];
+$replace = [
+    $config->baseUrl              => $baseUrl . '/',
+    $config->assets               => './assets',
+    '/index.php?page=index'       => 'index.html',
+    '/index.php?page=dokumentasi' => 'dokumentasi.html',
+    '/index.php?page=tentang'     => 'tentang.html',
+    '/index.php?page=inovasi'     => 'inovasi.html',
+    '/index.php?page=data-hasil'  => 'data-hasil.html',
+];
+foreach ($pages as $page) {
     echo "build {$page} ...";
     try {
-        build($config, $page);
+        $content = file_get_contents($config->baseUrl . '/index.php?prod=1&page=' . $page);
+
+        $html = strtr($content, $replace);
+
+        file_put_contents(dirname($config->root) . '/' . $page . '.html', $html);
     } catch (\Throwable $th) {
         echo " error\n{$th->getMessage()}";
         exit;

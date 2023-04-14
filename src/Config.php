@@ -12,8 +12,8 @@ class Config extends Component
     public $baseUrl = 'http://localhost/kaderkerensmpn5trenggalek/src/public';
     public $assets = '../../assets';
 
-    public $name = 'KADEr KEREN SMPN 5 Trenggalek';
-    public $title = 'KADEr KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan';
+    public $name = 'KADER KEREN SMPN 5 Trenggalek';
+    public $title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan';
 
     /** @var Request */
     public $request;
@@ -83,5 +83,21 @@ class Config extends Component
     public function isPage($page): string
     {
         return $this->getPage() === $page;
+    }
+
+    /**
+     * 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * 
+     */
+    public function setTitle($value)
+    {
+        $this->title = $value;
     }
 }

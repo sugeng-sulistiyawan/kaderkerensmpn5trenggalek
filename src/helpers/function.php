@@ -100,27 +100,6 @@ if (!function_exists('minifyJs')) {
 /**
  * 
  */
-function build(Config $config, $page)
-{
-    // $baseUrl = 'https://kaderkerensmpn5trenggalek.my.id';
-    $baseUrl = '';
-
-    $content = file_get_contents($config->baseUrl . '/index.php?prod=1&page=' . $page);
-
-    $html = strtr($content, [
-        $config->baseUrl => $baseUrl . '/',
-        $config->assets => './assets',
-        '/index.php?page=index' => 'index.html',
-        '/index.php?page=dokumentasi' => 'dokumentasi.html',
-        '/index.php?page=tentang' => 'tentang.html',
-    ]);
-
-    file_put_contents(dirname($config->root) . '/' . $page . '.html', $html);
-}
-
-/**
- * 
- */
 function concatCss()
 {
     $config = new Config();

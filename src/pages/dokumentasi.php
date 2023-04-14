@@ -14,7 +14,7 @@ $config = new Config();
       <div class="col-md-8 col-lg-5 order-2 order-lg-1">
         <div class="banner_title text-center text-sm-left">
           <h1 class="c-blue mt-0 mt-sm-4">
-            KADEr
+            KADER
             <span class="c-yollow">KEREN.</span>
           </h1>
           <h6 class="mb-5 c-sea">

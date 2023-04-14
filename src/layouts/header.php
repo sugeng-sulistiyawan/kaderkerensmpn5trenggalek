@@ -4,6 +4,7 @@ use app\Config;
 
 $config = new Config();
 
+dd($config->getTitle());
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +16,8 @@ $config = new Config();
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan" />
-  <meta name="keywords" content="Inklusi Sosial, Kader Keren, SMPN 5 Trenggalek" />
-  <meta name="author" content="Kader Keren SMPN 5 Trenggalek" />
+  <meta name="keywords" content="Inklusi Sosial, KADER KEREN, SMPN 5 Trenggalek" />
+  <meta name="author" content="KADER KEREN SMPN 5 Trenggalek" />
 
   <title><?= $config->title ?></title>
 
@@ -62,7 +63,7 @@ $config = new Config();
             <a class="navbar-brand" href="<?= $config->baseUrl ?>">
               <img class="logo" src="<?= $config->assets ?>/logo.png" alt="" />
               <div class="navbar-text font-weight-bold my-auto d-lg-none">
-                <span class="c-blue">KADEr</span>
+                <span class="c-blue">KADER</span>
                 <span class="c-yollow">KEREN</span>
               </div>
             </a>

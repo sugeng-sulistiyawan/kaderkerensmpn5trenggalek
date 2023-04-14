@@ -18,7 +18,7 @@ $config = new Config();
                     <img src="<?= $config->assets ?>/favicon.png" alt="">
                 </a>
                 <div class="mt-4">
-                    <h4 class="font-weight-bold">KADEr KEREN</h4>
+                    <h4 class="font-weight-bold">KADER KEREN</h4>
                     <h6>Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan</h6>
                 </div>
                 <div class="opyright">

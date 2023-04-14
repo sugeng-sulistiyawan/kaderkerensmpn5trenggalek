@@ -19,7 +19,10 @@ $config = new Config();
             <a class="nav-link" href="<?= $config->baseUrl ?>">Beranda</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?= $config->isPage('index') ? '' : $config->getBasePage('index') ?>#Inovasi">Inovasi</a>
+            <a class="nav-link" href="<?= $config->isPage('index') ? '' : $config->getBasePage('inovasi') ?>">Inovasi</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="<?= $config->isPage('index') ? '' : $config->getBasePage('data-hasil') ?>">Data & Hasil</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="<?= $config->getBasePage('dokumentasi') ?>">Dokumentasi</a>

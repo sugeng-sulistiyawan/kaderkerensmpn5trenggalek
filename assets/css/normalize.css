@@ -385,3 +385,7 @@ template {
 .table.nip-fmt tbody>tr>td:nth-child(2) {
   font-weight: bold !important;
 }
+
+.table.nama-fmt tbody>tr>td:nth-child(3) {
+  font-weight: bold !important;
+}

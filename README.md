@@ -1,4 +1,4 @@
-# KADEr KEREN SMPN 5 Trenggalek
+# KADER KEREN SMPN 5 Trenggalek
 
 Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan
 
