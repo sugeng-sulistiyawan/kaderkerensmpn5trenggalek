@@ -72,7 +72,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
                         <div class="d-lg-none nav_account btn_demo3 ml-auto mr-1">
                             <a href="<?= whatsappUrl() ?>" class="btn btn-dark bg-blue btn-sm effect-letter rounded-5" target="_blank" rel="noopener noreferrer">
-                                Admin Whatsapp
+                                Kontak Kami
                             </a>
                         </div>
 
@@ -104,7 +104,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                             </ul>
                             <div class="nav_account btn_demo3 d-none d-lg-block">
                                 <a href="<?= whatsappUrl() ?>" class="btn btn_sm_primary c-dark effect-letter rounded-8" target="_blank" rel="noopener noreferrer">
-                                    Admin Whatsapp
+                                    Kontak Kami
                                 </a>
                             </div>
                         </div>

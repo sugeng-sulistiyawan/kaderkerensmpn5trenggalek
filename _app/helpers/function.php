@@ -127,3 +127,40 @@ function isProd()
 {
     return \Yii::$app->request->get('prod') == 1;
 }
+
+/**
+ * `$code_$title_$price_$description`
+ * 
+ * `_` is separator
+ * 
+ * `-b-` => `<strong>`
+ * `-eb-` => `</strong>`
+ * `-br-` => `<br>`
+ * `-sc-` => `:`
+ */
+function explodeFileShop($file, &$basename, &$code, &$title, &$price, &$description)
+{
+    $filename = pathinfo($file, PATHINFO_FILENAME);
+    $meta = explode('_', $filename);
+
+    $replace = [
+        '-b-'  => '<strong>',
+        '-eb-' => '</strong>',
+        '-br-' => '<br>',
+        '-sc-' => ':',
+    ];
+
+    $basename    = pathinfo($file, PATHINFO_BASENAME);
+    $code        = strtr($meta[0], $replace);
+    $title       = strtr($meta[1], $replace);
+    $price       = strtr($meta[2], $replace);
+    $description = strtr($meta[3], $replace);
+
+    return [
+        'basename'    => $basename,
+        'code'        => $code,
+        'title'       => $title,
+        'price'       => $price,
+        'description' => $description,
+    ];
+}

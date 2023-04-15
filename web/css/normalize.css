@@ -386,6 +386,7 @@ template {
   font-weight: bold !important;
 }
 
-.table.nama-fmt tbody>tr>td:nth-child(3) {
+.table.anak-asuh-fmt tbody>tr>td:nth-child(4),
+.table.anak-asuh-fmt tbody>tr>td:nth-child(6) {
   font-weight: bold !important;
 }
