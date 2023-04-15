@@ -70,7 +70,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
 
                             explodeFileShop($value, $basename, $code, $title, $price, $description);
 
-                            $price = Yii::$app->formatter->asCurrency($price, 'Rp ');
+                            $price = 'Rp' . Yii::$app->formatter->asDecimal($price, 2);
                             $urlImage = Url::to("/web/refs/shop/{$key}/{$basename}", true);
                         ?>
                             <div class="col-md-6 col-lg-4 item">

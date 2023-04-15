@@ -47,6 +47,16 @@ $config = [
             'showScriptName' => false,
             'rules' => [],
         ],
+
+        'formatter' => [
+            'class'             => \yii\i18n\Formatter::class,
+            'nullDisplay'       => '-',
+            'dateFormat'        => 'yyyy-MM-dd',
+            'datetimeFormat'    => 'yyyy-MM-dd HH:mm:ss',
+            'decimalSeparator'  => ',',
+            'thousandSeparator' => '.',
+            'currencyCode'      => 'IDR',
+        ],
     ],
     'params' => $params,
 ];
