@@ -122,7 +122,7 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
             <div class="col-md-6 col-lg-4 d-none d-sm-block order-1 order-sm-1">
                 <div class="item_box item_one">
                     <div class="img_bbo">
-                        <img src="/web/img/app/01.png" />
+                        <img src="/web/refs/shop/01.png" />
                     </div>
                     <h3>POT SERABUT KELAPA </h3>
                     <p class="c-blue">
@@ -131,7 +131,7 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                 </div>
                 <div class="item_box item_two">
                     <div class="img_bbo">
-                        <img src="/web/img/app/02.png" />
+                        <img src="/web/refs/shop/02.png" />
                     </div>
                     <h3>LAMPU HIAS</h3>
                     <p class="c-green">
@@ -140,7 +140,7 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                 </div>
                 <div class="item_box item_three">
                     <div class="img_bbo">
-                        <img src="/web/img/app/03.png" />
+                        <img src="/web/refs/shop/03.png" />
                     </div>
                     <h3>LAMPU HIAS</h3>
                     <p class="c-green">
@@ -150,13 +150,13 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
             </div>
             <div class="col-md-6 col-lg-4 order-3 order-sm-2" data-aos="fade-up" data-aos-delay="0">
                 <div class="app_mobile">
-                    <img class="apoo" src="/web/img/app/app.png" />
+                    <img class="apoo" src="/web/refs/shop/app.png" />
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 d-none d-sm-block order-2 order-sm-3">
                 <div class="item_box item_four">
                     <div class="img_bbo">
-                        <img src="/web/img/app/04.png" />
+                        <img src="/web/refs/shop/04.png" />
                     </div>
                     <h3>BEL KAYU</h3>
                     <p class="c-green">
@@ -165,7 +165,7 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                 </div>
                 <div class="item_box item_five">
                     <div class="img_bbo">
-                        <img src="/web/img/app/05.png" />
+                        <img src="/web/refs/shop/05.png" />
                     </div>
                     <h3>TEMPAT PENSIL/PULPEN</h3>
                     <p class="c-blue">
@@ -174,7 +174,7 @@ $this->title = 'KADER KEREN SMPN 5 Trenggalek - Tekad Bermasa Depan Cerah bagi S
                 </div>
                 <div class="item_box item_six">
                     <div class="img_bbo">
-                        <img src="/web/img/app/06.png" />
+                        <img src="/web/refs/shop/06.png" />
                     </div>
                     <h3>KAPAL HIAS</h3>
                     <p class="c-orange">
