@@ -43,7 +43,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
 
 <!-- Start team_static_style -->
 <section class="team_static_style margin-t-5">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
 
     <?php foreach([
         'snack' => [
@@ -56,7 +56,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
         ],
     ] as $key => [$label, $color]) : ?>
         <div class="text-center mt-5 mb-3">
-            <button class="btn btn-primary btn-block btn-lg c-white bg-<?= $color ?> font-weight-bold" data-toggle="collapse" data-target=".collapse-<?= $key ?>" data-aos="fade-up" data-aos-delay="100">
+            <button class="btn btn-primary btn-block btn-lg c-white bg-<?= $color ?> font-weight-bold" data-toggle="collapse" data-target=".collapse-<?= $key ?>">
                 <?= $label ?>
             </button>
         </div>
