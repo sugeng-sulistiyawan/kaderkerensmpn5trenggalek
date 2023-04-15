@@ -45,52 +45,53 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
 <section class="team_static_style margin-t-5">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-    <?php foreach([
-        'snack' => [
-            'Aneka Snack dan Camilan',
-            'orange-red',
-        ],
-        'tools' => [
-            'Perlengkapan Rumah Tangga',
-            'dark',
-        ],
-    ] as $key => [$label, $color]) : ?>
-        <div class="text-center mt-5 mb-3">
-            <button class="btn btn-primary btn-block btn-lg c-white bg-<?= $color ?> font-weight-bold" data-toggle="collapse" data-target=".collapse-<?= $key ?>">
-                <?= $label ?>
-            </button>
-        </div>
+        <?php foreach ([
+            'snack' => [
+                'Aneka Snack dan Camilan',
+                'orange-red',
+            ],
+            'tools' => [
+                'Perlengkapan Rumah Tangga',
+                'dark',
+            ],
+        ] as $key => [$label, $color]) : ?>
+            <div class="text-center mt-5 mb-3">
+                <button class="btn btn-primary btn-block btn-lg c-white bg-<?= $color ?> font-weight-bold" data-toggle="collapse" data-target=".collapse-<?= $key ?>">
+                    <?= $label ?>
+                </button>
+            </div>
 
-        <div class="card collapse-<?= $key ?> collapse show">
-            <div class="card-body">
+            <div class="card collapse-<?= $key ?> collapse show">
+                <div class="card-body">
 
-                <div class="row justify-content-lg-center">
+                    <div class="row justify-content-lg-center">
 
-                    <?php foreach (FileHelper::findFiles(dirname(dirname(dirname(__DIR__))) . '/web/refs/shop/' . $key, ['only' => ['*.png', '*.jpg']]) as $value) :
+                        <?php foreach (FileHelper::findFiles(dirname(dirname(dirname(__DIR__))) . '/web/refs/shop/' . $key, ['only' => ['*.png', '*.jpg']]) as $value) :
 
-                        explodeFileShop($value, $basename, $code, $title, $price, $description);
+                            explodeFileShop($value, $basename, $code, $title, $price, $description);
 
-                        $urlImage = Url::to("/web/refs/shop/{$key}/{$basename}", true);
-                    ?>
-                        <div class="col-md-6 col-lg-4 item">
-                            <div class="card">
-                                <img class="card-img-top" src="<?= $urlImage ?>" alt="<?= $title ?>">
-                                <div class="card-body">
-                                    <kbd>KODE: <?= $code ?></kbd>
-                                    <h3 class="font-weight-bold my-1"><?= $title ?></h3>
-                                    <p><?= Yii::$app->formatter->asCurrency($price, 'Rp ') ?></p>
-                                    <p class="mt-2 mb-4 text-muted"><?= $description ?></p>
+                            $price = Yii::$app->formatter->asCurrency($price, 'Rp ');
+                            $urlImage = Url::to("/web/refs/shop/{$key}/{$basename}", true);
+                        ?>
+                            <div class="col-md-6 col-lg-4 item">
+                                <div class="card">
+                                    <img class="card-img-top" src="<?= $urlImage ?>" alt="<?= $title ?>">
+                                    <div class="card-body">
+                                        <kbd>KODE: <?= $code ?></kbd>
+                                        <h3 class="font-weight-bold my-1"><?= $title ?></h3>
+                                        <p><?= $price ?></p>
+                                        <p class="mt-2 mb-4 text-muted"><?= $description ?></p>
 
-                                    <a href="<?= whatsappUrl("Halo Kak, saya tertarik dengan produk {$label} berikut dan ingin memesannya.\n*Deskripsi Produk:*\n{$urlImage}\nKode Barang: *{$code}*\nNama Barang: *{$title}*\nHarga Barang: *{$price}*\nDeskripsi Barang: *{$description}*\n\nTerima kasih.") ?>" class="btn btn-success btn-block" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+                                        <a href="<?= whatsappUrl("Halo Kak, saya tertarik dengan produk {$label} berikut dan ingin memesannya.\n*Deskripsi Produk:*\n{$urlImage}\nKode Barang: *{$code}*\nNama Barang: *{$title}*\nHarga Barang: *{$price}*\nDeskripsi Barang: *{$description}*\n\nTerima kasih.") ?>" class="btn btn-success btn-block" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach ?>
+                        <?php endforeach ?>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    <?php endforeach ?>
+        <?php endforeach ?>
 
     </div>
 </section>

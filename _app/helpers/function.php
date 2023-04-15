@@ -100,7 +100,7 @@ if (!function_exists('minifyJs')) {
  */
 function whatsappUrl(string $text = "Hallo Kak, saya mau tanya-tanya dong :)\n"): string
 {
-    return 'https://wa.me/' . phonePretty(true, true) . ($text ? '?text=' . rawurlencode($text) : '');
+    return 'https://wa.me/' . phonePretty(true, true) . ($text ? '?text=' . urlencode($text) : '');
 }
 
 /**
@@ -133,6 +133,7 @@ function isProd()
  * 
  * `_` is separator
  * 
+ * `+` => ` `
  * `-b-` => `<strong>`
  * `-eb-` => `</strong>`
  * `-br-` => `<br>`
@@ -144,6 +145,7 @@ function explodeFileShop($file, &$basename, &$code, &$title, &$price, &$descript
     $meta = explode('_', $filename);
 
     $replace = [
+        '+'    => ' ',
         '-b-'  => '<strong>',
         '-eb-' => '</strong>',
         '-br-' => '<br>',
