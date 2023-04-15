@@ -82,7 +82,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
                                         <p><?= $price ?></p>
                                         <p class="mt-2 mb-4 text-muted"><?= $description ?></p>
 
-                                        <a href="<?= whatsappUrl("Halo Kak, saya tertarik dengan produk {$label} berikut dan ingin memesannya.\n*Deskripsi Produk:*\n{$urlImage}\nKode Barang: *{$code}*\nNama Barang: *{$title}*\nHarga Barang: *{$price}*\nDeskripsi Barang: *{$description}*\n\nTerima kasih.") ?>" class="btn btn-success btn-block" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
+                                        <a href="<?= whatsappUrl("Halo Kak, saya tertarik dengan produk {$label} berikut dan ingin memesannya.\n\n*Deskripsi Produk:*\n{$urlImage}\n\nKode Barang: *{$code}*\nNama Barang: *{$title}*\nHarga Barang: *{$price}*\n\nTerima kasih.") ?>" class="btn btn-success btn-block" target="_blank" rel="noopener noreferrer">Pesan Sekarang</a>
                                     </div>
                                 </div>
                             </div>
