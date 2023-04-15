@@ -24,7 +24,7 @@ class BuildController extends Controller
         ];
         $replace = [
             'http://localhost:8080'            => 'https://kaderkerensmpn5trenggalek.my.id',
-            urlencode('http://localhost:8080') => urlencode('https://kaderkerensmpn5trenggalek.my.id'),
+            rawurlencode('http://localhost:8080') => rawurlencode('https://kaderkerensmpn5trenggalek.my.id'),
             '/site/index'                      => 'index.html',
             '/site/dokumentasi'                => 'dokumentasi.html',
             '/site/tentang'                    => 'tentang.html',
