@@ -23,6 +23,7 @@ class BuildController extends Controller
             'data-hasil',
         ];
         $replace = [
+            'localhost:8080'    => 'https://kaderkerensmpn5trenggalek.my.id',
             '/site/index'       => 'index.html',
             '/site/dokumentasi' => 'dokumentasi.html',
             '/site/tentang'     => 'tentang.html',
