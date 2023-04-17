@@ -139,8 +139,12 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                             <div class="opyright">
                                 <p>
                                     © <?= date('Y') ?>
-                                    <a href="/">KADER KEREN - SMP Negeri 5 Trenggalek</a>.
+                                    <a href="/" class="font-weight-bold">KADER KEREN - SMP Negeri 5 Trenggalek</a>.
                                     <span class="d-block d-md-inline-block">All Right Reserved.</span>
+                                </p>
+                                <p>
+                                    Crafted with <span class="c-red">❤</span> by
+                                    <a href="https://sugengsulistiyawan.my.id" class="c-red font-weight-bold" target="_blank" rel="noopener noreferrer">Sugeng Sulistiyawan</a>.
                                 </p>
                             </div>
                         </div>
