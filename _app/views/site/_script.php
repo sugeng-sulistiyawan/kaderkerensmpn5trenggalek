@@ -4,7 +4,7 @@
  * @param dataPie 
  * @param dataColors 
  */
-function __createChartPie(elemId, dataPie, dataColors) {
+function __createChartPie(elemId, dataPie, dataColors, title) {
     am5.ready(function () {
 
         var rootPie = am5.Root.new(elemId);
@@ -100,7 +100,7 @@ function __createChartPie(elemId, dataPie, dataColors) {
          */
         var exportingPie = am5plugins_exporting.Exporting.new(rootPie, {
             menu: am5plugins_exporting.ExportingMenu.new(rootPie, {}),
-            filePrefix: "Pie - {$title}" + ("{$tagline}" == "" ? "" : "{$tagline}"),
+            filePrefix: "Pie " + title,
             printOptions: {
                 disabled: true,
             },

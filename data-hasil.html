@@ -331,7 +331,7 @@
  * @param dataPie 
  * @param dataColors 
  */
-function __createChartPie(elemId, dataPie, dataColors) {
+function __createChartPie(elemId, dataPie, dataColors, title) {
     am5.ready(function () {
 
         var rootPie = am5.Root.new(elemId);
@@ -427,7 +427,7 @@ function __createChartPie(elemId, dataPie, dataColors) {
          */
         var exportingPie = am5plugins_exporting.Exporting.new(rootPie, {
             menu: am5plugins_exporting.ExportingMenu.new(rootPie, {}),
-            filePrefix: "Pie - {$title}" + ("{$tagline}" == "" ? "" : "{$tagline}"),
+            filePrefix: "Pie " + title,
             printOptions: {
                 disabled: true,
             },
@@ -438,15 +438,15 @@ function __createChartPie(elemId, dataPie, dataColors) {
 
     });
 }
-__createChartPie('chart-0', [{"label":"< 500 ribu","value":143},{"label":"500 ribu s/d < 1 juta","value":306},{"label":"1 juta s/d < 2 juta","value":1},{"label":"2 juta s/d < 5 juta","value":31},{"label":"> 5 juta","value":106},{"label":"Tidak Ada Keterangan","value":30},{"label":"Tidak Berpenghasilan","value":32}], ["#03A9F4","#3F51B5","#FF9800","#8BC34A","#9C27B0","#673AB7","#9E9E9E","#E91E63"]);
-__createChartPie('chart-1', [{"label":"<= 1 juta","value":511},{"label":"> 1 juta","value":138}], ["#FF9800","#8BC34A"]);
-__createChartPie('chart-2', [{"label":"<= 1 juta","value":410},{"label":"> 1 juta","value":339}], ["#FF9800","#8BC34A"]);
-__createChartPie('chart-3', [{"label":"Masuk","value":533},{"label":"Sakit","value":32},{"label":"Izin","value":18},{"label":"Tanpa Keterangan","value":249}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"]);
-__createChartPie('chart-4', [{"label":"Masuk","value":714},{"label":"Sakit","value":22},{"label":"Izin","value":7},{"label":"Tanpa Keterangan","value":89}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"]);
-__createChartPie('chart-5', [{"label":"Mengerjakan","value":15},{"label":"Terlambat","value":9},{"label":"Tidak","value":5}], ["#8BC34A","#FF9800","#E91E63"]);
-__createChartPie('chart-6', [{"label":"Mengerjakan","value":27},{"label":"Terlambat","value":4},{"label":"Tidak","value":1}], ["#8BC34A","#FF9800","#E91E63"]);
-__createChartPie('chart-7', [{"label":"Tertib belajar","value":423},{"label":"Kecanduan Game Online","value":112},{"label":"Cangkruk di Warkop","value":45},{"label":"Pulang Malam","value":72}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"]);
-__createChartPie('chart-8', [{"label":"Tertib belajar","value":576},{"label":"Kecanduan Game Online","value":42},{"label":"Cangkruk di Warkop","value":15},{"label":"Pulang Malam","value":19}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"]);
+__createChartPie('chart-0', [{"label":"< 500 ribu","value":143},{"label":"500 ribu s/d < 1 juta","value":306},{"label":"1 juta s/d < 2 juta","value":1},{"label":"2 juta s/d < 5 juta","value":31},{"label":"> 5 juta","value":106},{"label":"Tidak Ada Keterangan","value":30},{"label":"Tidak Berpenghasilan","value":32}], ["#03A9F4","#3F51B5","#FF9800","#8BC34A","#9C27B0","#673AB7","#9E9E9E","#E91E63"], 'Penghasilan Orang Tua - Jumlah Siswa');
+__createChartPie('chart-1', [{"label":"<= 1 juta","value":511},{"label":"> 1 juta","value":138}], ["#FF9800","#8BC34A"], 'Penghasilan Orang Tua - BEFORE');
+__createChartPie('chart-2', [{"label":"<= 1 juta","value":410},{"label":"> 1 juta","value":339}], ["#FF9800","#8BC34A"], 'Penghasilan Orang Tua - AFTER');
+__createChartPie('chart-3', [{"label":"Masuk","value":533},{"label":"Sakit","value":32},{"label":"Izin","value":18},{"label":"Tanpa Keterangan","value":249}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"], 'Presensi 2021 - BEFORE');
+__createChartPie('chart-4', [{"label":"Masuk","value":714},{"label":"Sakit","value":22},{"label":"Izin","value":7},{"label":"Tanpa Keterangan","value":89}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"], 'Presensi 2021 - AFTER');
+__createChartPie('chart-5', [{"label":"Mengerjakan","value":15},{"label":"Terlambat","value":9},{"label":"Tidak","value":5}], ["#8BC34A","#FF9800","#E91E63"], 'Ketertiban Siswa Mengerjakan Tugas - BEFORE');
+__createChartPie('chart-6', [{"label":"Mengerjakan","value":27},{"label":"Terlambat","value":4},{"label":"Tidak","value":1}], ["#8BC34A","#FF9800","#E91E63"], 'Ketertiban Siswa Mengerjakan Tugas - AFTER');
+__createChartPie('chart-7', [{"label":"Tertib belajar","value":423},{"label":"Kecanduan Game Online","value":112},{"label":"Cangkruk di Warkop","value":45},{"label":"Pulang Malam","value":72}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"], 'Siswa Malas Belajar - BEFORE');
+__createChartPie('chart-8', [{"label":"Tertib belajar","value":576},{"label":"Kecanduan Game Online","value":42},{"label":"Cangkruk di Warkop","value":15},{"label":"Pulang Malam","value":19}], ["#8BC34A","#FF9800","#03A9F4","#E91E63"], 'Siswa Malas Belajar - AFTER');
 });</script></body>
 
 </html>

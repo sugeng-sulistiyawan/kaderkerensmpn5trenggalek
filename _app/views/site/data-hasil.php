@@ -230,7 +230,7 @@ $this->registerJs($this->render('_script', []));
                     $dataJson = Json::encode($data);
                     $colorsJson = empty($customColors) ? $defaultColorJson : Json::encode($customColors);
 
-                    $this->registerJs("__createChartPie('{$id}', {$dataJson}, {$colorsJson});");
+                    $this->registerJs("__createChartPie('{$id}', {$dataJson}, {$colorsJson}, '{$key} - {$label}');");
 
                     $i++;
                 ?>
