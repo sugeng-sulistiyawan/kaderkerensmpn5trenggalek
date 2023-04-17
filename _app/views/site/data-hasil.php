@@ -2,25 +2,45 @@
 
 /** @var yii\web\View $this */
 
+use app\assets\AppAsset;
 use yii\helpers\Html;
+use yii\helpers\Inflector;
+use yii\helpers\Json;
 
 $this->title = 'Data & Hasil - KADER KEREN SMPN 5 Trenggalek';
+
+foreach ([
+    "https://cdn.amcharts.com/lib/5/index.js",
+    "https://cdn.amcharts.com/lib/5/locales/id_ID.js",
+    "https://cdn.amcharts.com/lib/5/xy.js",
+    "https://cdn.amcharts.com/lib/5/percent.js",
+    "https://cdn.amcharts.com/lib/5/themes/Animated.js",
+    "https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js",
+    "https://cdn.amcharts.com/lib/5/plugins/exporting.js",
+] as $js) {
+    $this->registerJsFile($js, [
+        'depends' => AppAsset::class,
+    ]);
+}
+
+$this->registerJs($this->render('_script', []));
+
 
 ?>
 
 <!-- Start banner_about -->
-<section class="pt_banner_inner banner_px_image" id="Discover">
+<section class="pt_banner_inner banner_px_image">
     <div class="parallax_cover">
-        <img class="cover-parallax" src="/web/img/inner/about.jpg" alt="image">
+        <img class="cover-parallax" src="/web/img/inner/data.jpg" alt="image">
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-lg-6">
-                <div class="banner_title_inner c-white">
+                <div class="banner_title_inner c-blue">
                     <h1 data-aos="fade-up" data-aos-delay="0">
-                        Tentang Kami
+                        Data & Hasil
                     </h1>
-                    <p data-aos="fade-up" data-aos-delay="100" class="banner_title_inner c-yollow">
+                    <p data-aos="fade-up" data-aos-delay="100" class="banner_title_inner c-dark">
                         KADER KEREN - SMP Negeri 5 Trenggalek
                     </p>
                 </div>
@@ -31,58 +51,203 @@ $this->title = 'Data & Hasil - KADER KEREN SMPN 5 Trenggalek';
 </section>
 <!-- End banner_about -->
 
-<!-- Start about_cc_grid -->
-<section class="about_cc_grid padding-py-12" id="About">
+<section class="about_cc_grid padding-b-12 padding-t-6">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="title_sections_inner mb-0">
-                    <div class="before_title">
-                        <span class="c-orange-red">Apa itu KADER KEREN ? </span>
+
+        <div class="row justify-content-center align-items-center">
+            <?php
+
+            $i = 0;
+            foreach ([
+                'Penghasilan Orang Tua' => [
+                    'blue',
+                    [
+                        '#FF9800',
+                        '#8BC34A',
+                    ],
+                    [
+                        [
+                            '12',
+                            'Penghasilan Orang Tua (Rp)',
+                            'Jumlah Siswa',
+                            [
+                                ['label' => '< 500 ribu', 'value' => 143],
+                                ['label' => '500 ribu s/d < 1 juta', 'value' => 306],
+                                ['label' => '1 juta s/d < 2 juta', 'value' => 1],
+                                ['label' => '2 juta s/d < 5 juta', 'value' => 31],
+                                ['label' => '> 5 juta', 'value' => 106],
+                                ['label' => 'Tidak Ada Keterangan', 'value' => 30],
+                                ['label' => 'Tidak Berpenghasilan', 'value' => 32],
+                            ],
+                            [
+                                '#03A9F4',
+                                '#3F51B5',
+                                '#FF9800',
+                                '#8BC34A',
+                                '#9C27B0',
+                                '#673AB7',
+                                '#9E9E9E',
+                                '#E91E63',
+                            ],
+                        ],
+                        [
+                            '6',
+                            'Penghasilan Orang Tua (Rp)',
+                            'BEFORE',
+                            [
+                                ['label' => '<= 1 juta', 'value' => 511],
+                                ['label' => '> 1 juta', 'value' => 138],
+                            ],
+                            [],
+                        ],
+                        [
+                            '6',
+                            'Penghasilan Orang Tua (Rp)',
+                            'AFTER',
+                            [
+                                ['label' => '<= 1 juta', 'value' => 410],
+                                ['label' => '> 1 juta', 'value' => 339],
+                            ],
+                            [],
+                        ],
+                    ]
+                ],
+                'Presensi 2021' => [
+                    'orange-red',
+                    [
+                        '#8BC34A',
+                        '#FF9800',
+                        '#03A9F4',
+                        '#E91E63',
+                    ],
+                    [
+                        [
+                            '6',
+                            'Kehadiran Siswa',
+                            'BEFORE',
+                            [
+                                ['label' => 'Masuk', 'value' => 533],
+                                ['label' => 'Sakit', 'value' => 32],
+                                ['label' => 'Izin', 'value' => 18],
+                                ['label' => 'Tanpa Keterangan', 'value' => 249],
+                            ],
+                            [],
+                        ],
+                        [
+                            '6',
+                            'Kehadiran Siswa',
+                            'AFTER',
+                            [
+                                ['label' => 'Masuk', 'value' => 714],
+                                ['label' => 'Sakit', 'value' => 22],
+                                ['label' => 'Izin', 'value' => 7],
+                                ['label' => 'Tanpa Keterangan', 'value' => 89],
+                            ],
+                            [],
+                        ],
+                    ]
+                ],
+                'Ketertiban Siswa Mengerjakan Tugas' => [
+                    'green',
+                    [
+                        '#8BC34A',
+                        '#FF9800',
+                        '#E91E63',
+                    ],
+                    [
+                        [
+                            '6',
+                            'Siswa Mengerjakan Tugas',
+                            'BEFORE',
+                            [
+                                ['label' => 'Mengerjakan', 'value' => 15],
+                                ['label' => 'Terlambat', 'value' => 9],
+                                ['label' => 'Tidak', 'value' => 5],
+                            ],
+                            [],
+                        ],
+                        [
+                            '6',
+                            'Siswa Mengerjakan Tugas',
+                            'AFTER',
+                            [
+                                ['label' => 'Mengerjakan', 'value' => 27],
+                                ['label' => 'Terlambat', 'value' => 4],
+                                ['label' => 'Tidak', 'value' => 1],
+                            ],
+                            [],
+                        ],
+                    ]
+                ],
+                'Siswa Malas Belajar' => [
+                    'purple',
+                    [
+                        '#8BC34A',
+                        '#FF9800',
+                        '#03A9F4',
+                        '#E91E63',
+                    ],
+                    [
+                        [
+                            '6',
+                            'Siswa Malas Belajar',
+                            'BEFORE',
+                            [
+                                ['label' => 'Tertib belajar', 'value' => 423],
+                                ['label' => 'Kecanduan Game Online', 'value' => 112],
+                                ['label' => 'Cangkruk di Warkop', 'value' => 45],
+                                ['label' => 'Pulang Malam', 'value' => 72],
+                            ],
+                            [],
+                        ],
+                        [
+                            '6',
+                            'Siswa Malas Belajar',
+                            'AFTER',
+                            [
+                                ['label' => 'Tertib belajar', 'value' => 576],
+                                ['label' => 'Kecanduan Game Online', 'value' => 42],
+                                ['label' => 'Cangkruk di Warkop', 'value' => 15],
+                                ['label' => 'Pulang Malam', 'value' => 19],
+                            ],
+                            [],
+                        ],
+                    ]
+                ],
+            ] as $key => [$color, $colors, $chart]) :
+
+                $class = Inflector::slug($key);
+                $defaultColorJson = Json::encode($colors);
+            ?>
+
+                <div class="col-md-12 my-3">
+                    <button class="btn c-white btn-primary btn-block btn-lg py-3 font-weight-bold bg-<?= $color ?>" data-toggle="collapse" data-target=".collapse-<?= $class ?>"><?= $key ?></button>
+                </div>
+
+                <?php foreach ($chart as [$col, $pre, $label, $data, $customColors]) :
+
+                    $id = "chart-{$i}";
+                    $dataJson = Json::encode($data);
+                    $colorsJson = empty($customColors) ? $defaultColorJson : Json::encode($customColors);
+
+                    $this->registerJs("__createChartPie('{$id}', {$dataJson}, {$colorsJson});");
+
+                    $i++;
+                ?>
+
+                    <div class="col-md-<?= $col ?> collapse-<?= $class ?> collapse">
+
+                        <div class="text-center my-5 ">
+                            <h5 class="font-weight-bold"><?= $pre ?></h5>
+                            <h4 class="font-weight-bold"><?= $label ?></h4>
+                            <div id="<?= $id ?>" class="w-100" style="height: 500px;"></div>
+                        </div>
+
                     </div>
-                    <h2>Tekad Bermasa Depan Cerah bagi Siswa Kelompok Rentan oleh SMP Negeri 5 Trenggalek</h2>
-                </div>
-            </div>
-            <div class="col-lg-6 ml-auto">
-                <div class="title_sections_inner mb-0">
-                    <p class="c-blue font-weight-bold">KADER KEREN adalah program inklusi dengan support aplikasi marketing berbasis web yang memprioritaskan peningkatan karakter positif dan kecerdasan finansial bagi anak-anak marjinal dan rentan putus sekolah level SMP. Program yang mempunyai impak afirmatif dan prospek keberlangsungan jangka panjang ini mempunyai beberapa strategi distingtif sebagai berikut:</p>
-                    <ol>
-                        <li class="c-blue"><strong>Pendampingan orang tua asuh untuk pengembangan karakter positif.</strong><br>
-                            <p class="c-blue">Orang tua asuh merupakan pendamping, motivator, role model dan mentor siswa, yang berasal dari sukarelawan guru, wali murid, dan komite sekolah. Pendampingan orang tua asuh dilakukan seminggu sekali secara intensif, dengan mengkolaborasikan kegiatan coaching religi, literasi, dan kegiatan sosial lainnya.</p>
-                        </li>
-                        <li class="c-blue"><strong>Program kewirausahaan untuk pengembangan kecerdasan finansial.</strong><br>
-                            <ol>
-                                <li class="c-blue">Tahap coaching melalui pemberian motivasi kewirausahaan dengan menghadirkan narasumber dari 6 IDUKA (Industri Dunia Usaha dan Dunia Kerja). Keenam IDUKA tersebut yakni HIJAB (Himpunan Janda Berkarya), Warung Bu Sihir, A &amp; A Tailor, Zia Handmade, Kriya Kayu Wonoanti, dan pengrajin logam Bintang Sejati.</li>
-                                <li class="c-blue">Tahap training kewirausahaan dan pembuatan produk dari 4 keterampilan (keterampilan dasar otomotif/logam, bangunan/kriya kayu, tata busana, dan tata boga). Keterampilan ini merupakan ekstrakurikuler wajib sehingga setiap siswa wajib mengikuti salah satu. Untuk mempertajam skill dan keterampilan anak asuh, maka diadakan pelatihan selama 10 kali pertemuan dengan tenaga ahli dari IDUKA.</li>
-                                <li class="c-blue">Tahap Pemasaran online melalui aplikasi pemasaran digital berbasis web dan offline dengan menitipkan produk di tempat usaha IDUKA. Bersama orang tua asuh, setiap anak asuh memasarkan produk tersebut dan bekerja keras untuk mencapai target profit penjualan.&nbsp;</li>
-                            </ol>
-                        </li>
-                    </ol>
-                </div>
-            </div>
+
+            <?php endforeach;
+            endforeach ?>
         </div>
-
-        <div class="margin-t-12" data-aos="fade-up" data-aos-delay="0">
-            <img src="/web/refs/about-1.jpg" alt="" class="w-100">
-        </div>
-    </div>
-</section>
-<!-- End. about_cc_grid -->
-
-<section class="faq_section padding-py-6 mt-0 w-100">
-    <div class="container">
-
-        <div class="title_sections_inner text-center mt-2">
-            <h2 class="font-weight-bold">STRUKTUR INOVASI "KADER KEREN"</h2>
-            <h5>TAHUN 2023</h5>
-        </div>
-        <img src="/web/refs/struktur-org.png" alt="" class="w-100" data-toggle="collapse" data-target=".collapsess">
-
-    </div>
-</section>
-
-<section class="service__workspace padding-py-6 mt-0 w-100">
-    <div class="container">
 
     </div>
 </section>

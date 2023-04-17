@@ -35,7 +35,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
 
     <div class="container padding-t-10">
         <p class="font-s-30 font-w-600 c-dark">
-            Berbagai macam produk dapat kamu temukan di sini dan membelinya secara lansung dan harga yang sangat terjangkau.
+            Berbagai produk dapat kamu temukan di sini dan membelinya secara lansung dengan harga yang sangat terjangkau.
         </p>
     </div>
 </section>
@@ -46,15 +46,27 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <?php foreach ([
-            'snack' => [
+            [
+                'snack',
                 'Aneka Snack dan Camilan',
                 'orange-red',
             ],
-            'tools' => [
+            [
+                'ornament',
+                'Pernak Pernik Istana / Ornament',
+                'green',
+            ],
+            [
+                'accessories',
+                'Aksesoris Unik',
+                'sea',
+            ],
+            [
+                'tools',
                 'Perlengkapan Rumah Tangga',
                 'dark',
             ],
-        ] as $key => [$label, $color]) : ?>
+        ] as [$key, $label, $color]) : ?>
             <div class="text-center mt-5 mb-3">
                 <button class="btn btn-primary btn-block btn-lg c-white bg-<?= $color ?> font-weight-bold" data-toggle="collapse" data-target=".collapse-<?= $key ?>">
                     <?= $label ?>
@@ -73,7 +85,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
                             $price = 'Rp' . Yii::$app->formatter->asDecimal($price, 2);
                             $urlImage = Url::to("/web/refs/shop/{$key}/{$basename}", true);
                         ?>
-                            <div class="col-md-6 col-lg-4 item">
+                            <div class="col-md-6 col-lg-4 item my-2">
                                 <div class="card">
                                     <img class="card-img-top" src="<?= $urlImage ?>" alt="<?= $title ?>">
                                     <div class="card-body">
@@ -89,6 +101,7 @@ $this->title = 'Inovasi - KADER KEREN SMPN 5 Trenggalek';
                         <?php endforeach ?>
 
                     </div>
+
                 </div>
             </div>
         <?php endforeach ?>
