@@ -100,7 +100,7 @@ function __createChartPie(elemId, dataPie, dataColors, title) {
          */
         var exportingPie = am5plugins_exporting.Exporting.new(rootPie, {
             menu: am5plugins_exporting.ExportingMenu.new(rootPie, {}),
-            filePrefix: "Pie " + title,
+            filePrefix: "Chart " + title,
             printOptions: {
                 disabled: true,
             },
